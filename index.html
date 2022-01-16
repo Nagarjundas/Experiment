@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="globalsign-domain-verification" content="HtuxAdfAkg_UH35wjkpxrVtjHs1FRjXqL_V81YIv2t"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#138e69">
+        <title>Front-end Web Development, Chewed Up &larr;Alligator.io</title>
+        <link rel='dns-prefetch' href='https://alligator.io'>
+        <style>
+            :root {
+                --bg: #fff;
+                --bg2: #fafafa;
+                --bg3: #fcfcfc;
+                --bg4: #f8f8f8;
+                --footer-bg: rgba(114,186,94,.15);
+                --code: #dc3958;
+                --code-text: #6C7757;
+                --code-comment: #9AA880;
+                --text-color: #555;
+                --pale-text: #999;
+                --info-box-text: #84613d;
+                --gs0: #eee;
+                --gs1: #CCC;
+                --gs2: #AAA;
+                --green1: #008f68;
+                --green2: #6DB65B;
+                --green3: #4AAE9B;
+                --yellow1: #EFBB35;
+                --yellow2: #dfa612;
+                --yellow3: #FAE042;
+                --subtle: rgba(0, 0, 0, .1);
+                --very-subtle: rgba(0, 0, 0, .05);
+                --top1: rgba(107, 183, 86, .95);
+                --top2: rgba(0, 143, 104, .95);
+                --subtle-green1: rgba(114, 186, 94, 0.55);
+                --subtle-green2: rgba(114, 186, 94, 0.05);
+                --subtle-yellow1: rgba(239, 187, 53, 0.6);
+                --subtle-yellow2: rgba(236, 198, 48, .1);
+                --subtle-yellow3: rgba(236, 198, 48, .3);
+                --fb: #3b5998;
+                --reddit: #FC471E;
+                --h-news: #F60;
+                --twitter: #00aced;
+                --cat-head: rgba(114, 186, 94, 0.1);
+                --front-text-color: #93a791;
+                --info-box-bg: rgba(255, 213, 70, 0.1)
+            }
+
+            .dark {
+                --bg: #222831;
+                --bg2: #181C22;
+                --bg3: #1A1D24;
+                --bg4: black;
+                --footer-bg: rgba(0, 0, 0, .3);
+                --code: #F59BAC;
+                --code-text: #FAD7A0;
+                --code-text: #FEE6C0;
+                --code-comment: #81899B;
+                --text-color: #F9FFEE;
+                --pale-text: #dfa612;
+                --info-box-text: antiquewhite;
+                --gs0: rgba(239, 187, 53, 0.6);
+                --gs1: rgba(239, 187, 53, 0.6);
+                --green1: #EFBB35;
+                --green2: #E84279;
+                --green3: #dfa612;
+                --top1: #302E24;
+                --top2: #28313E;
+                --subtle-green1: rgba(236, 198, 48, .1);
+                --subtle-green2: #1A1D24;
+                --subtle-yellow3: rgba(236, 198, 48, .1);
+                --fb: #fff;
+                --reddit: #fff;
+                --h-news: #fff;
+                --twitter: #fff;
+                --cat-head: #1A1D24;
+                --front-text-color: antiquewhite;
+                --info-box-bg: #1A1D24
+            }
+
+            @font-face {
+                font-family: "Recursive";
+                src: url("https://d33wubrfki0l68.cloudfront.net/0fb48cf42677cf004e48f2608a8521a4ca06b48d/8a39e/assets/fonts/recursive-mono_casl_wght_slnt_ital--2019_11_05-00_13.woff2") format("woff2-variations");
+                font-weight: 300 900;
+                font-display: swap
+            }
+
+            time[datetime],span.author,span.sponsored {
+                border: 2px solid rgba(220,57,88,0.15);
+                border-radius: 6px;
+                padding: .3rem .75rem;
+                font-size: .85rem;
+                color: var(--code);
+                white-space: nowrap;
+                margin-top: .3rem;
+                display: inline-block
+            }
+
+            span.author a {
+                color: var(--code)
+            }
+
+            .top,.tweet-it {
+                opacity: 0;
+                transform: translateY(7rem)
+            }
+
+            img,svg {
+                height: auto;
+                display: inline-block;
+                max-width: 100%;
+                vertical-align: middle;
+                border: 0
+            }
+
+            pre {
+                overflow: auto;
+                margin: 2rem 0;
+                clear: both
+            }
+
+            strong {
+                font-weight: 500
+            }
+
+            .button,a,button {
+                text-decoration: none
+            }
+
+            .button,.top-bar,body,button {
+                position: relative
+            }
+
+            html {
+                font-size: 16px
+            }
+
+            *,*:after,*:before {
+                box-sizing: border-box
+            }
+
+            article ol li,article p,article ul li {
+                font-size: 25px
+            }
+
+            body {
+                background: var(--bg);
+                color: var(--text-color);
+                padding: 0;
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+                line-height: 1.6;
+                font-weight: 300;
+                transition: background-color .25s ease-out
+            }
+
+            hr {
+                width: 15%;
+                border: 0;
+                border-top: 4px solid var(--yellow3);
+                margin: 2.5em auto 2.3em
+            }
+
+            .right {
+                float: right;
+                margin-right: 1em
+            }
+
+            .alligator-logo {
+                transition: transform 0.1s cubic-bezier(0, 1.8, 1, 1.8);
+                transform: translateY(0.7em)
+            }
+
+            .main-article {
+                display: grid;
+                grid-template-columns: minmax(200px, 3fr) 1fr;
+                grid-gap: 4rem
+            }
+
+            @media (max-width: 1120px) {
+                .main-article {
+                    grid-template-columns:100%
+                }
+            }
+
+            .row {
+                max-width: 55rem;
+                margin: 0 auto;
+                padding: 0 .9rem;
+                position: relative
+            }
+
+            .article-row {
+                max-width: 75rem
+            }
+
+            .main-article aside {
+                margin-top: 1.9em
+            }
+
+            input[type=text],input[type=email],input[type=search],textarea {
+                -webkit-appearance: none;
+                border-style: solid;
+                border-width: 1px;
+                border-color: var(--gs1);
+                box-shadow: inset 0 1px 2px var(--subtle);
+                display: block;
+                padding: .5rem;
+                width: 100%;
+                transition: box-shadow .45s, border-color .45s ease-in-out;
+                background: var(--bg3);
+                color: var(--text-color)
+            }
+
+            .top-bar {
+                overflow: hidden;
+                height: 3.75rem;
+                background: linear-gradient(to right, rgba(107,183,86,0.95), #008f68);
+                background: linear-gradient(to right, var(--top1), var(--top2));
+                margin-bottom: 0;
+                z-index: 1
+            }
+
+            .top-bar .title-area {
+                margin: 0
+            }
+
+            .top-bar .name div {
+                line-height: 3.75rem;
+                padding: 0 1.25rem
+            }
+
+            .top-bar .name div a {
+                color: #fff
+            }
+
+            @media (min-width: 1121px) {
+                a.angular {
+                    border-bottom:3px solid #DD0031
+                }
+
+                a.vuejs {
+                    border-bottom: 3px solid #41B883
+                }
+
+                a.react {
+                    border-bottom: 3px solid #61dafb
+                }
+
+                a.css {
+                    border-bottom: 3px solid #3399FE
+                }
+
+                a.javascript {
+                    border-bottom: 3px solid #F7DF1E
+                }
+
+                a.gatsby {
+                    border-bottom: 3px solid rebeccapurple
+                }
+            }
+
+            .toggle-topbar {
+                position: absolute;
+                right: 0;
+                top: 17px
+            }
+
+            .toggle-topbar.menu-icon a {
+                padding: 0 1rem;
+                color: #fff
+            }
+
+            .top-bar.expanded {
+                height: auto
+            }
+
+            .top-bar-section {
+                position: relative
+            }
+
+            .top-bar-section .special {
+                background: white;
+                color: #525252;
+                padding: .45rem;
+                border-radius: 4px;
+                color: #525252;
+                transition: opacity .25s ease-out
+            }
+
+            .top-bar-section ul {
+                width: 100%;
+                margin: 0
+            }
+
+            .top-bar-section ul li {
+                height: 3.7em
+            }
+
+            .top-bar-section ul li>a {
+                display: block;
+                width: 100%;
+                color: #fff;
+                font-size: .9rem
+            }
+
+            .top-bar-section ul li.active>a {
+                background: var(--subtle);
+                color: #fff
+            }
+
+            .breadcrumbs {
+                text-align: center;
+                margin-top: 4.5rem;
+                text-transform: uppercase
+            }
+
+            .text-center,footer,header {
+                text-align: center
+            }
+
+            div,form,li,ol,p,ul {
+                margin: 0;
+                padding: 0
+            }
+
+            ol,p,ul {
+                margin-bottom: 1.25rem
+            }
+
+            p {
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+                -ms-word-break: normal;
+                word-break: normal
+            }
+
+            h1,h2,h3,h4 {
+                color: var(--green1);
+                margin-top: .2rem;
+                margin-bottom: 1rem;
+                line-height: 1;
+                font-weight: 200
+            }
+
+            h2,h3 {
+                font-weight: 300
+            }
+
+            ol,ul {
+                margin-left: 20px;
+                padding: 0;
+                list-style-type: none
+            }
+
+            @media only screen {
+                .medium-down {
+                    display: inherit
+                }
+
+                .large-up {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 40.063em) {
+                h1 {
+                    font-size:2.75rem
+                }
+
+                h2 {
+                    font-size: 2.25rem
+                }
+
+                h3 {
+                    font-size: 2rem
+                }
+
+                h4 {
+                    font-size: 1.4rem
+                }
+
+                .medium-down {
+                    display: inherit
+                }
+
+                .large-up {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 90.063em) {
+                header {
+                    margin-top:7rem
+                }
+
+                .large-up {
+                    display: inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 120.063em) {
+                .large-up {
+                    display:inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+            }
+
+            a,a:link {
+                transition: all .2s;
+                color: var(--yellow2)
+            }
+
+            div[itemprop] a,.foot-panel.more-posts h3 a {
+                text-decoration: underline;
+                text-decoration-color: var(--subtle-yellow3);
+                -webkit-text-decoration-skip: ink;
+                text-decoration-skip: ink
+            }
+
+            img,pre {
+                border-radius: 3px
+            }
+
+            h1,.foot-panel h3,.wrap-site-sponsors h3,.subscribe-follow h4,.footer-panels a,#_default_ a._default_ .default-title,#_default_ a._default_ .default-description,.vscode-pro h4,.vscode-pro a,.algolia__result-link {
+                font-family: Recursive, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, 'Open Sans', FreeSans, sans-serif;
+                font-variation-settings: "CASL" 0, "slnt" -5
+            }
+
+            .file-desc,time[datetime],code,code.highlighter-rouge,.breadcrumbs>*,span.author,span.sponsored,.related-posts h4,.related-posts .front-teaser,.subfooter,blockquote p,.post-meta,footer a,.subfooter a {
+                font-family: Recursive, 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+                font-variation-settings: "MONO" 1;
+                font-weight: 450
+            }
+
+            footer a {
+                font-weight: 300
+            }
+
+            h1 {
+                font-size: 3.7em;
+                margin-bottom: .2em
+            }
+
+            h2 {
+                margin: .8em 0 0;
+                padding-bottom: 0.4em
+            }
+
+            h4 {
+                margin: 1.15em 0
+            }
+
+            pre {
+                background: var(--bg3);
+                padding: 5px 20px;
+                border: 2px solid var(--very-subtle)
+            }
+
+            code {
+                font-size: 1.25rem
+            }
+
+            @media (min-width: 2050px) {
+                pre {
+                    margin-left:-15rem
+                }
+
+                code {
+                    font-size: 1.35rem
+                }
+            }
+
+            @media (min-width: 1850px) and (max-width: 2049px) {
+                pre {
+                    margin-left:-8rem
+                }
+
+                code {
+                    font-size: 1.3rem
+                }
+            }
+
+            #navigation {
+                box-shadow: 0 2px 20px 0 var(--subtle)
+            }
+
+            .t20 {
+                margin-top: 20px
+            }
+
+            article h2,article h3 {
+                font-family: Recursive;
+                font-variation-settings: "slnt" -10, "CASL" 0;
+                margin: 2em 0 .8em;
+                padding-bottom: 0;
+                display: flex
+            }
+
+            article h2 {
+                color: var(--yellow1);
+                font-weight: 400;
+                transition: font-variation-settings .25s ease-out
+            }
+
+            .rrssb-buttons li {
+                opacity: .65;
+                transition: all .26s
+            }
+
+            .rrssb-buttons {
+                display: flex;
+                justify-content: space-around;
+                margin: 1.7em auto 1.2em;
+                max-width: 200px
+            }
+
+            .hide,.ciu_embed,li.has-dropdown,.algolia__search-content,.foot-panel.hide {
+                display: none
+            }
+
+            @media only screen and (min-width: 70em) {
+                .front-teaser:hover {
+                    transform:translateY(-2px)
+                }
+
+                li.extra-menu {
+                    display: none
+                }
+
+                li.has-dropdown {
+                    display: list-item;
+                    position: relative
+                }
+
+                li.has-dropdown:hover ul.dropdown,li.has-dropdown:focus-within ul.dropdown {
+                    opacity: 1;
+                    pointer-events: auto
+                }
+
+                .top-bar .title-area,.top-bar-section ul li {
+                    float: left
+                }
+
+                .top-bar {
+                    overflow: visible
+                }
+
+                .top-bar:after,.top-bar:before {
+                    content: " ";
+                    display: table
+                }
+
+                .top-bar:after {
+                    clear: both
+                }
+
+                .top-bar .toggle-topbar {
+                    display: none
+                }
+
+                .top-bar input {
+                    font-size: .875rem;
+                    position: relative;
+                    height: 2rem;
+                    top: 0.875rem
+                }
+
+                .top-bar-section ul {
+                    width: auto
+                }
+
+                .top-bar-section li a {
+                    padding: 0 1.25rem;
+                    line-height: 3.75rem
+                }
+
+                .large-up {
+                    display: inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+
+                h1 {
+                    padding: 0 0.8em
+                }
+            }
+
+            p.snip-first,div[itemprop="articleSection"]>p:first-of-type {
+                margin-bottom: 1em;
+                margin-top: 1.9em;
+                border-left: 4px solid var(--yellow3);
+                padding-left: .8em;
+                text-align: justify
+            }
+
+            em,span.char,span.keyboard {
+                background-color: var(--subtle-yellow2);
+                line-height: inherit;
+                padding: 5px 7px 0;
+                white-space: pre-wrap;
+                border-bottom: 2px solid var(--subtle-yellow3);
+                font-style: normal;
+                border-radius: 4px
+            }
+
+            .front-teaser {
+                margin: 1em .7em;
+                border-radius: 3px;
+                border-bottom-right-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 1px 1px 15px rgba(67,38,100,0.15);
+                padding: 1.85rem;
+                background: var(--bg3)
+            }
+
+            .dark .a404,.solarized-dark .a404 {
+                filter: grayscale(1) brightness(9)
+            }
+
+            .front-teaser h3 {
+                font-size: 1.4em;
+                color: var(--green3);
+                text-align: center;
+                font-weight: 300;
+                margin: 0
+            }
+
+            @media only screen and (max-width: 40em) {
+                code {
+                    font-size:1rem
+                }
+
+                article ol li,article p,article ul li {
+                    font-size: 1.25em
+                }
+
+                article h2,h2 {
+                    font-size: 1.5em
+                }
+
+                article h3 {
+                    font-size: 1.2em;
+                    line-height: 1.4
+                }
+
+                article h3#side-get-newsletter {
+                    line-height: 1
+                }
+
+                h1 {
+                    font-size: 2em;
+                    margin: 0.45em 0 0.4em
+                }
+
+                pre {
+                    padding: 5px 3px
+                }
+
+                .front-teaser {
+                    font-size: .6em
+                }
+
+                .front-teaser h3 {
+                    font-size: 1.7em
+                }
+            }
+
+            .breadcrumbs>a {
+                color: var(--code)
+            }
+
+            input.algolia__input,input.bottom-subscribe {
+                border-radius: 8px;
+                font-size: 17px
+            }
+
+            input.algolia__input {
+                background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIGQ9Ik0zMSAyNy4ybC03LjYtNi40Yy0uOC0uNy0xLjYtMS0yLjMtMSAyLTIgMy00LjggMy03LjggMC02LjYtNS40LTEyLTEyLTEyUzAgNS40IDAgMTJzNS40IDEyIDEyIDEyYzMgMCA1LjctMSA3LjgtMyAwIC44LjMgMS42IDEgMi40bDYuNCA3LjZjMSAxLjIgMyAxLjMgNCAuMnMxLTMtLjItNHpNMTIgMjBjLTQuNCAwLTgtMy42LTgtOHMzLjYtOCA4LTggOCAzLjYgOCA4LTMuNiA4LTggOHoiLz48L3N2Zz4=") 7px 50%/1em 1em no-repeat rgba(0,0,0,0.1);
+                transition: all .2s ease-out;
+                width: 140px;
+                padding-left: 1.8em;
+                border-color: var(--subtle);
+                color: #fff;
+                padding-bottom: 0;
+                padding-top: 0
+            }
+
+            @media only screen and (max-width: 40em), only screen and (min-width: 40.063em) and (max-width: 70em) {
+                input.algolia__input {
+                    position:relative;
+                    left: 0.7em;
+                    top: 1.3em;
+                    display: inline-block;
+                    background-size: 12px 12px;
+                    height: 28px
+                }
+
+                .wrap-search input.algolia__input:focus {
+                    width: 130px
+                }
+
+                .wrap-search {
+                    position: absolute;
+                    right: 70px;
+                    top: -66px
+                }
+
+                .top-bar-section ul li:nth-child(2) {
+                    margin-top: 1em
+                }
+
+                .top-bar-section ul li>a {
+                    font-size: 1.2em
+                }
+
+                .top-bar-section ul li {
+                    height: 3em
+                }
+
+                .left,.right {
+                    text-align: center
+                }
+            }
+
+            .rrssb-buttons svg {
+                height: 22px;
+                width: 22px
+            }
+
+            .info-box {
+                background: var(--info-box-bg);
+                padding: 0.8em;
+                margin-top: 1.8rem;
+                border-left: 4px solid rgba(236,198,48,0.5);
+                color: var(--info-box-text);
+                line-height: 1.4;
+                text-align: center;
+                position: relative;
+                clear: both
+            }
+
+            .top-bar-section ul.dropdown {
+                width: 510px;
+                position: absolute;
+                transition: opacity .15s ease-out;
+                padding: 0;
+                z-index: 99;
+                overflow: hidden;
+                pointer-events: none;
+                opacity: 0;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                box-shadow: 0px 2px 8px var(--subtle);
+                background: var(--green1);
+                border-top: 2px solid var(--yellow3);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                transform: translateX(-40%)
+            }
+
+            .dark .top-bar-section ul.dropdown,.solarized-dark .top-bar-section ul.dropdown {
+                background: var(--top2)
+            }
+
+            input.bottom-subscribe {
+                max-width: 250px;
+                text-align: center;
+                display: block;
+                border-color: var(--green2);
+                border-width: 2px;
+                height: 2.5em;
+                margin: 0 auto;
+                margin-bottom: .8em;
+                background: var(--bg);
+                color: var(--text-color)
+            }
+
+            .foot-panel.newsletter-form {
+                margin-top: 1.5rem
+            }
+
+            h3#side-get-newsletter,div.twitter h3 {
+                font-size: 1.6rem;
+                display: block
+            }
+
+            .foot-panel.more-posts h3,.foot-panel.site-sponsors h3 {
+                color: var(--yellow1)
+            }
+
+            .foot-panel.site-sponsors svg {
+                max-height: 35px
+            }
+
+            .foot-panel.more-posts a {
+                color: inherit
+            }
+
+            .foot-panel.more-posts a.all-posts,.foot-panel.site-sponsors a.about-sponsors {
+                color: var(--code);
+                text-decoration: underline;
+                display: inline-block;
+                margin-top: .5rem
+            }
+
+            a.site-sponsor-link {
+                color: var(--code)
+            }
+
+            .foot-panel.more-posts h4:not(:last-child)::after,.site-sponsor:not(:last-child)::after {
+                width: 2.5rem;
+                height: 2px;
+                background: var(--green2);
+                content: " ";
+                display: block;
+                margin: 0px auto;
+                position: relative;
+                top: 1rem
+            }
+
+            .foot-panel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin-top: 2rem;
+                text-align: center;
+                margin-bottom: 2rem
+            }
+
+            .more-posts,.newsletter-form,.tw-follow,.site-sponsors,#codefund,#native-js2 {
+                border-radius: 3px;
+                background: var(--bg2);
+                overflow: visible;
+                padding: 2rem;
+                box-shadow: 0px 2px 5px var(--very-subtle)
+            }
+
+            .site-sponsor {
+                max-width: 90%;
+                margin-top: 1rem
+            }
+
+            .site-sponsor p {
+                font-size: 1rem;
+                font-weight: 200;
+                margin-bottom: 0;
+                margin-top: .5rem;
+                line-height: 1.2
+            }
+
+            #native-js2 {
+                padding: 0
+            }
+
+            #native-js2 .native-details {
+                color: var(--text-color);
+                padding: 1rem;
+                text-align: center;
+                margin-right: 0;
+                box-shadow: 0px 2px 5px var(--very-subtle)
+            }
+
+            #native-js2 .native-img {
+                max-height: unset;
+                margin-right: 0;
+                text-align: center;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0
+            }
+
+            #native-js2 .native-img img {
+                max-width: 175px;
+                padding: 1rem 0
+            }
+
+            #codefund {
+                padding: 0;
+                float: right;
+                max-width: 235px;
+                margin: 3.5rem 0 1rem 1rem
+            }
+
+            @media (min-width: 1120px) {
+                #codefund {
+                    position:relative;
+                    left: 4rem;
+                    bottom: 2rem
+                }
+
+                .foot-panel.more-posts:first-child {
+                    margin-top: 23rem
+                }
+            }
+
+            #codefund a {
+                color: var(--text-color);
+                text-decoration: none
+            }
+
+            #codefund .cf-text {
+                padding: 0 0.25rem 0.5rem;
+                display: block;
+                font-size: 15px;
+                line-height: 1.3
+            }
+
+            #codefund .cf-img {
+                width: 100%;
+                padding-bottom: 0.7rem
+            }
+
+            #codefund em {
+                padding: 0;
+                background-color: transparent;
+                border-bottom: none;
+                font-style: italic
+            }
+
+            #codefund strong {
+                font-weight: bold
+            }
+
+            @media only screen and (max-width: 600px) {
+                #codefund {
+                    float:none;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-left: 0;
+                    margin-top: .5rem
+                }
+            }
+
+            .site-sponsors,#codefund,.recommended {
+                border-bottom: 3px solid var(--code);
+                border-image-source: linear-gradient(to right, #008f68, #fae042);
+                border-image-slice: 1;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0
+            }
+
+            .site-sponsors img {
+                margin-bottom: 1rem;
+                margin-top: .5rem
+            }
+
+            .tw-follow {
+                background: #00aced
+            }
+
+            .tw-follow {
+                width: 100%;
+                margin-top: 0
+            }
+
+            .tw-follow a {
+                color: white
+            }
+
+            .foot-panel h3,.wrap-site-sponsors h3 {
+                letter-spacing: -1px;
+                font-size: 1.3rem
+            }
+
+            .foot-panel h4 {
+                font-size: 1.2rem;
+                margin: 0.85em 0
+            }
+
+            .button,button.small,div a.button {
+                background-image: linear-gradient(to bottom, var(--bg), var(--bg4));
+                border-radius: 8px;
+                color: var(--green3);
+                letter-spacing: 1px;
+                padding: 10px 20px;
+                border: 0;
+                box-shadow: 0 0 10px var(--subtle);
+                font: inherit;
+                text-decoration: none;
+                transition: transform 0.15s cubic-bezier(0, 1.8, 1, 1.8)
+            }
+
+            .native-js {
+                transform: translateY(calc(100% - 35px));
+                visibility: hidden;
+                opacity: 0;
+                display: none
+            }
+
+            .recommended {
+                padding: 5rem 2rem 0.6rem 2rem;
+                background: var(--bg2);
+                border-radius: 3px;
+                position: relative;
+                -webkit-clip-path: polygon(0 0, 5% 5%, 10% 0, 15% 5%, 20% 0, 25% 5%, 30% 0, 35% 5%, 40% 0, 45% 5%, 50% 0, 55% 5%, 60% 0, 65% 5%, 70% 0, 75% 5%, 80% 0, 85% 5%, 90% 0, 95% 5%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 5% 5%, 10% 0, 15% 5%, 20% 0, 25% 5%, 30% 0, 35% 5%, 40% 0, 45% 5%, 50% 0, 55% 5%, 60% 0, 65% 5%, 70% 0, 75% 5%, 80% 0, 85% 5%, 90% 0, 95% 5%, 100% 0, 100% 100%, 0 100%);
+                clear: both
+            }
+
+            .recommended h4 {
+                margin-top: 0;
+                font-weight: 400;
+                color: var(--yellow2);
+                font-family: Recursive
+            }
+
+            .recommended p {
+                padding-left: 2rem;
+                padding-top: .5rem
+            }
+
+            @media (max-width: 600px) {
+                .recommended p {
+                    line-height:1.2;
+                    font-size: 1.2rem;
+                    padding-left: 0
+                }
+            }
+
+            .recommended p span {
+                border-bottom: 3px solid var(--subtle-green1)
+            }
+
+            div.recommended a {
+                text-decoration: var(--subtle-yellow1) double underline
+            }
+
+            .about-link {
+                padding-top: 1rem;
+                text-align: right;
+                right: .4rem;
+                top: .4rem
+            }
+
+            .about-link a {
+                font-size: 1rem
+            }
+
+            p.front-category {
+                margin-bottom: 0;
+                font-size: 1.5em;
+                margin-top: 1.5em
+            }
+
+            p.front-category img {
+                vertical-align: text-bottom;
+                border-radius: 0
+            }
+
+            .wrap-doodle {
+                position: relative;
+                z-index: 0
+            }
+
+            .top-doodle {
+                position: absolute;
+                top: 0;
+                left: 0
+            }
+
+            .no-doodle-support css-doodle {
+                display: none
+            }
+
+            .cat-head {
+                margin-bottom: 2em;
+                padding: 2em 0;
+                background: linear-gradient(to bottom, var(--cat-head), var(--bg))
+            }
+
+            .cat-head img,.cat-head h1 {
+                position: relative
+            }
+
+            .cat-head img {
+                max-width: 18%;
+                border-radius: 0
+            }
+
+            .alligator-head {
+                -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+                clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0)
+            }
+
+            .alligator-head {
+                background-color: #6bb756;
+                background: linear-gradient(to right, rgba(107,183,86,0.95), rgba(0,143,104,0.95));
+                background: linear-gradient(to right, var(--top1), var(--top2));
+                margin-bottom: 1em;
+                padding-bottom: 3.5em
+            }
+
+            .alligator-head img:hover {
+                animation: colorrr 10s infinite
+            }
+
+            @keyframes colorrr {
+                0% {
+                    filter: hue-rotate(0deg)
+                }
+
+                50% {
+                    filter: hue-rotate(360deg)
+                }
+            }
+
+            div.alligator-head img {
+                margin: 2em 0 0;
+                width: 180px;
+                height: 180px
+            }
+
+            div.alligator-head p {
+                font-size: 1.2em;
+                padding: 0 1em
+            }
+
+            div.alligator-head h1 {
+                font-size: 3em
+            }
+
+            div.front-flex {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr
+            }
+
+            @media only screen and (min-width: 30em) and (max-width: 64em) {
+                div.front-flex {
+                    grid-template-columns:1fr 1fr
+                }
+            }
+
+            @media only screen and (max-width: 30em) {
+                div.front-flex {
+                    grid-template-columns:1fr
+                }
+            }
+
+            @media only screen and (max-width: 40em) {
+                div.category a.front-teaser p {
+                    line-height:1.3
+                }
+
+                .alligator-head h1 {
+                    font-size: 1.3em !important;
+                    letter-spacing: 0;
+                    padding: 0 .5em;
+                    margin-top: 1em
+                }
+
+                .cat-head h1 {
+                    font-size: 2em;
+                    padding: 0 2em
+                }
+
+                .cat-head {
+                    padding-bottom: .7em;
+                    padding-top: 1em
+                }
+
+                .alligator-head p {
+                    font-size: 0.9em !important;
+                    padding: 0 2em !important
+                }
+
+                div.alligator-head img {
+                    width: 110px;
+                    height: 110px
+                }
+            }
+
+            div.alligator-head h1,div.alligator-head p {
+                color: #fff;
+                text-shadow: 0 0 14px rgba(0,0,0,0.28)
+            }
+
+            .angular-teaser,.ionic-teaser,.typescript-teaser,.css-teaser,.js-teaser,.html-teaser,.web-components-teaser,.sass-teaser,.svg-teaser,.vuejs-teaser,.jekyll-teaser,.react-teaser,.graphql-teaser,.flow-teaser,.nodejs-teaser,.rxjs-teaser,.stencil-teaser,.workflow-teaser,.polymer-teaser,.redux-teaser,.gatsbyjs-teaser,.svelte-teaser,.flutter-teaser {
+                background: var(--bg3) linear-gradient(135deg, var(--c) 10px, rgba(0,0,0,0.01) 0)
+            }
+
+            .angular-teaser,.front-category-ng {
+                --c: #DD0031
+            }
+
+            .ionic-teaser,.front-category-ionic {
+                --c: #4B8DFB
+            }
+
+            .typescript-teaser,.front-category-typescript {
+                --c: #007ACC
+            }
+
+            .css-teaser,.front-category-css {
+                --c: #3399FE
+            }
+
+            .js-teaser,.front-category-js {
+                --c: #F7DF1E
+            }
+
+            .html-teaser,.web-components-teaser {
+                --c: #F16528
+            }
+
+            .sass-teaser {
+                --c: #CF649A
+            }
+
+            .svg-teaser {
+                --c: #FF9900
+            }
+
+            .vuejs-teaser,.front-category-vuejs {
+                --c: #41B883
+            }
+
+            .jekyll-teaser {
+                --c: #D20000
+            }
+
+            .react-teaser,.front-category-react {
+                --c: #61dafb
+            }
+
+            .graphql-teaser {
+                --c: #E535AB
+            }
+
+            .flow-teaser {
+                --c: #E8BD36
+            }
+
+            .nodejs-teaser,.front-category-nodejs {
+                --c: #336633
+            }
+
+            .rxjs-teaser {
+                --c: #64008D
+            }
+
+            .stencil-teaser {
+                --c: #000
+            }
+
+            .workflow-teaser,.front-category-workflow {
+                --c: #f442c2
+            }
+
+            .polymer-teaser {
+                --c: #FF4C89
+            }
+
+            .redux-teaser {
+                --c: #764ABC
+            }
+
+            .gatsbyjs-teaser {
+                --c: rebeccapurple
+            }
+
+            .svelte-teaser,.front-category-svelte {
+                --c: #FF3E00
+            }
+
+            .flutter-teaser {
+                --c: #0276e8
+            }
+
+            .front-category {
+                color: var(--c)
+            }
+
+            a.top-teaser {
+                background-color: rgba(0,143,104,0.95);
+                background-color: var(--top2);
+                box-shadow: 1px 1px 15px 4px rgba(67,38,100,0.15)
+            }
+
+            .dark a.top-teaser {
+                background-color: var(--bg3)
+            }
+
+            a.top-teaser h3 {
+                color: white
+            }
+
+            .alligator-separator {
+                max-width: 800px
+            }
+
+            .cat-head img {
+                margin: 3em 0 1.25em
+            }
+
+            @media only screen and (max-width: 72em) {
+                a.front-teaser {
+                    flex-basis:100% !important;
+                    margin: 1.1em .7em
+                }
+            }
+
+            @media only screen and (max-width: 64em) {
+                ul.left li:first-child {
+                    display:none
+                }
+            }
+
+            div.saved-row a:hover {
+                color: #EFBB35
+            }
+
+            div.saved-row .front-teaser {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between
+            }
+
+            div.saved-row h3 {
+                margin-bottom: 1.3rem
+            }
+
+            .remove-post {
+                display: inline;
+                background-color: rgba(255,213,70,0.1);
+                border-bottom: 2px solid rgba(236,198,48,0.2);
+                padding: 0.3em 0.9em;
+                cursor: pointer;
+                transition: transform 0.1s cubic-bezier(0, 1.8, 1, 1.8);
+                font-size: 0.7rem
+            }
+
+            .remove-post:hover {
+                transform: scale(1.05)
+            }
+
+            .hidden {
+                display: none
+            }
+
+            input.filter {
+                width: 500px;
+                max-width: 100%;
+                margin-bottom: 2.2rem
+            }
+
+            div.category .front-teaser p {
+                color: var(--front-text-color);
+                margin-bottom: 0;
+                font-size: 1rem;
+                text-align: center
+            }
+
+            div.category .front-teaser {
+                flex-basis: 28%;
+                justify-content: space-around;
+                padding: 1.25rem;
+                flex-direction: column
+            }
+
+            div.category .row {
+                max-width: 65rem
+            }
+
+            div.category .top-row {
+                background: linear-gradient(to bottom, var(--subtle-yellow3), var(--bg));
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                padding-top: .6rem
+            }
+
+            div.category .front-teaser h3,div.category .front-teaser p {
+                font-family: Recursive, 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+                font-variation-settings: "MONO" 1;
+                font-weight: 450
+            }
+
+            div.category .front-teaser h3 {
+                margin-bottom: 1rem;
+                line-height: 1.2
+            }
+
+            body footer {
+                padding-top: 7.5rem
+            }
+
+            .subfooter {
+                background: var(--bg);
+                padding: 0rem .9rem 30px
+            }
+
+            .home-subscribe-box {
+                background: linear-gradient(to bottom, transparent, var(--subtle-yellow2));
+                padding: 1.3rem 0 1.5rem;
+                margin: 3.5rem 0 3.5rem;
+                transform: skewY(6deg)
+            }
+
+            .home-subscribe-box * {
+                transform: skewY(-3deg)
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Alligator.io Feed" href="/feed.xml">
+        <link rel="canonical" href="https://alligator.io/">
+        <link rel="manifest" href="/assets/manifest.json">
+        <meta name="description" content="Learn Angular 2+, Vue.js, React, TypeScript, Ionic, JavaScript (ES6/ES2015+) &amp; CSS with short, straightforward posts."/>
+        <link rel="icon" sizes="192x192" href="/assets/img/touch-icon-192x192.png">
+        <link rel="icon" sizes="32x32" href="/assets/img/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-180x180-precomposed.png">
+        <meta property="og:title" content="Front-end Web Development, Chewed Up"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Learn Angular 2+, Vue.js, React, TypeScript, Ionic, JavaScript (ES6/ES2015+) &amp; CSS with short, straightforward posts."/>
+        <meta property="og:url" content="https://alligator.io/"/>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@alligatorio">
+        <meta name="twitter:title" content="Front-end Web Development, Chewed Up">
+        <meta name="twitter:description" content="Learn frontend web development with short posts and snippets.">
+        <meta name="twitter:image" content="https://alligator.io/images/front-end-cover.png">
+    </head>
+    <body class="dark">
+        <div class="progress"></div>
+        <div id="navigation">
+            <nav class="top-bar" role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <div class="medium-down">
+                            <a href="/explore/">⚡ Explore</a>
+                        </div>
+                    </li>
+                    <li class="toggle-topbar menu-icon">
+                        <a href="#" title="Navigation menu">&bull;&bull;&bull;</a>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="wrap-search">
+                            <input aria-label="Search the website" role="searchbox" type="search" placeholder="live search" class="algolia__input js-algolia__input">
+                        </li>
+                        <li class="large-up">
+                            <a href="https://twitter.com/alligatorio" target="_blank" rel="noopener">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                    <path fill="white" d="M24.3 8.8c.4 8.3-6 15.4-14.3 15.8a15 15 0 0 1-9-2.3c2.8.2 5.5-.6 7.6-2.3A5.4 5.4 0 0 1 4 16.3c1 .2 1.7 0 2.5 0A5.4 5.4 0 0 1 2 11a5.4 5.4 0 0 0 2.3.5 5.4 5.4 0 0 1-1.4-7A15 15 0 0 0 13.7 10a5.2 5.2 0 0 1 3.4-6.4 5.2 5.2 0 0 1 5.6 1.7A9 9 0 0 0 26 4a5 5 0 0 1-2.3 3 9 9 0 0 0 3-1 5 5 0 0 1-2.4 2.8z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="left">
+                        <li>
+                            <a href="/explore/">⚡ Latest</a>
+                        </li>
+                        <li>
+                            <a href="/js/">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="/vuejs/">Vue.js</a>
+                        </li>
+                        <li>
+                            <a href="/react.html">React</a>
+                        </li>
+                        <li>
+                            <a href="/angular/">Angular</a>
+                        </li>
+                        <li>
+                            <a href="/css/">CSS</a>
+                        </li>
+                        <li>
+                            <a href="/gatsbyjs/">Gatsby</a>
+                        </li>
+  
+                       
+                        <li class="has-dropdown">
+                            <a href="#" class="switch-theme" aria-label="theme switcher" title="theme switcher"></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#" class="toggle-light">Light</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-dark dark">Dark</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-solarized solarized">Solarized</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-solarized-dark solarized-dark">Solarized Dark</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+        <div class="algolia__initial-content js-algolia__initial-content">
+            <div class="alligator-head text-center">
+              
+               <img src="./asset/pngaaa.com-267682.png" alt="Welcome to Alligator.io">
+              
+              
+                <h1>
+                    Front-End Web Development,<br>Chewed Up
+                </h1>
+                <p class="b30">
+                    Angular 2+, Vue.js, React, Svelte<br>JavaScript, CSS, Node.js...
+                </p>
+            </div>
+            <p class="text-center front-category">🏆 Top Posts</p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser top-teaser react-teaser" data-teaser="react" href="/react/typescript-with-react/">
+                        <h3>Using TypeScript with React</h3>
+                    </a>
+                    <a class="front-teaser top-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/vue-modal-component/">
+                        <h3>Building a Modal Component with Vue.js</h3>
+                    </a>
+                    <a class="front-teaser top-teaser react-teaser" data-teaser="react" href="/react/axios-react/">
+                        <h3>Using Axios with React</h3>
+                    </a>
+                    <a class="front-teaser top-teaser js-teaser" data-teaser="js" href="/js/async-functions/">
+                        <h3>Exploring Async/Await Functions in JavaScript</h3>
+                    </a>
+                    <a class="front-teaser top-teaser css-teaser" data-teaser="css" href="/css/cropping-images-object-fit/">
+                        <h3>Cropping Images in CSS With object-fit</h3>
+                    </a>
+                    <a class="front-teaser top-teaser css-teaser" data-teaser="css" href="/css/pure-css-parallax/">
+                        <h3>Pure-CSS Parallax Scrolling Effect</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="home-subscribe-box">
+                <div style="margin: 0 auto 4rem; max-width: 55rem; font-size: 1.4rem; padding-left: 1.5rem; padding-right: 1.5rem;">
+                    <h2 style="padding-left: 0; margin-bottom: 1rem;" class="text-center">Alligator.io is joining the DigitalOcean Community!</h2>
+                    <p>I started Alligator.io a few years ago as a way to help me learn and share my insights with the community. At the time, I had no idea it would grow to become the platform it is today, and I couldn’t be prouder.</p>
+                    <p>As the platform grew, it welcomed contributors from all backgrounds to publish about what they know and love with the community.</p>
+                    <p>Always with a deep love and appreciation for the web platform and the JavaScript ecosystem, Alligator.io has now grown to be a major source of knowledge for anybody who's interested in modern web development.</p>
+                    <p>
+                        I’m excited to announce that starting in May, Alligator.io will be joining the <a href="https://www.digitalocean.com/community">DigitalOcean Community</a>
+                        .
+                    </p>
+                    <p>While the topics covered within each of our sites are different, we share a passion for technical writing and a common goal of helping developers build, solve problems, and learn.</p>
+                    <ul class="b30" style="list-style-type: initial; padding-left: 1rem; transform: skewY(0deg) !important;">
+                        <li>DigitalOcean is committed to maintaining the library of alligator.io articles</li>
+                        <li>
+                            Writers on Alligator.io can keep getting paid to publish via the <a href="https://www.digitalocean.com/community/pages/write-for-digitalocean">Write4DO</a>
+                            program
+                        </li>
+                        <li>DigitalOcean developers are focused on combining the strengths of each platform into one that provides a best-in-class, open and accessible learning environment</li>
+                    </ul>
+                    <p>I'm forever grateful for the hard work and dedication of all contributors over the years, and I look forward to seeing our writing continue to reach new generations of developers.</p>
+                    <p style="text-align: right;">
+                        - <em>Seb</em>
+                    </p>
+                </div>
+            </div>
+            <p class="text-center front-category front-category-vuejs">
+                <img src="https://d33wubrfki0l68.cloudfront.net/ecc375571d5b9d3d9f919291751a2257f1f2317e/df948/images/logos/vue-logo.svg" alt="Vue.js logo" width="30">&nbsp;Vue.js
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/whats-coming-in-vue-3/">
+                        <h3>An Overview of What's Coming in Vue 3</h3>
+                    </a>
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/i18n-formatting-fallbacks/">
+                        <h3>More i18n with Vue: Formatting and Fallbacks</h3>
+                    </a>
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/jest-snapshot-testing-in-vue/">
+                        <h3>Introduction to Jest Snapshot Testing in Vue.js</h3>
+                    </a>
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/vue-with-i18n/">
+                        <h3>Implementing i18n in Vue.js Using vue-i18n</h3>
+                    </a>
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/vue-custom-events/">
+                        <h3>Introduction to Vue Custom Events</h3>
+                    </a>
+                    <a class="front-teaser vuejs-teaser" data-teaser="vuejs" href="/vuejs/vue-template-syntax/">
+                        <h3>Using Vue Template Syntax to Build A Photo Gallery</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/vuejs/" aria-label="More Vue.js posts">All Vue Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-react">
+                <img src="https://d33wubrfki0l68.cloudfront.net/83a655ba436af2f8cc7d826aecaa94cb2a261c5b/0041c/images/logos/react-logo.svg" alt="React logo" width="30">&nbsp;React
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/react-router-v6/">
+                        <h3>A Sneak Peek at React Router v6</h3>
+                    </a>
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/crud-context-hooks/">
+                        <h3>Building a CRUD App with React Hooks &the Context API</h3>
+                    </a>
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/error-boundaries/">
+                        <h3>A Simple Guide to Error Boundaries in React</h3>
+                    </a>
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/keep-react-fast/">
+                        <h3>5 Tips to Improve the Performance of Your React Apps</h3>
+                    </a>
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/styling-react-native/">
+                        <h3>Styling React Native Apps</h3>
+                    </a>
+                    <a class="front-teaser react-teaser" data-teaser="react" href="/react/staggering-animations/">
+                        <h3>Create Staggering Animations in React</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/react/" aria-label="More React posts">All React Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-js">
+                <img src="https://d33wubrfki0l68.cloudfront.net/041b1fc21a460c50d6231f6c30666e4b46272708/d0092/images/logos/js-logo.svg" alt="JavaScript logo" width="30">&nbsp;JavaScript
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/binary-heaps/">
+                        <h3>Binary Heaps and Priority Queues via JavaScript</h3>
+                    </a>
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/mutability/">
+                        <h3>Mutable Immutable JavaScript</h3>
+                    </a>
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/eleventy/">
+                        <h3>A Brief Tour of the Eleventy Static Site Generator</h3>
+                    </a>
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/page-visibility-api/">
+                        <h3>How to Detect Idle Browser Tabs with the Page Visibility API</h3>
+                    </a>
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/what-are-cookies/">
+                        <h3>What Are Cookies &How to Work With Them Using JavaScript</h3>
+                    </a>
+                    <a class="front-teaser js-teaser" data-teaser="js" href="/js/date-fns/">
+                        <h3>Quick Tour of date-fns, a Simple JavaScript Date Library</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/js" aria-label="More JavaScript posts">All JavaScript Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-css">
+                <img src="https://d33wubrfki0l68.cloudfront.net/9a54b47b8dee9fab250d235976bd88732ff39558/63381/images/logos/css3-logo.svg" alt="CSS logo" width="30">&nbsp;CSS
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/system-font-stack/">
+                        <h3>CSS System Font Stack Reference</h3>
+                    </a>
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/css-scrollbars/">
+                        <h3>Styling Scrollbars with CSS: The Modern Way to Style Scrollbars</h3>
+                    </a>
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/line-height/">
+                        <h3>Using the CSS line-height Property to Improve Readability</h3>
+                    </a>
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/root-pseudo-class/">
+                        <h3>How to Use the CSS :root Pseudo-Class Selector</h3>
+                    </a>
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/important/">
+                        <h3>When Should You Use the CSS !important Rule?</h3>
+                    </a>
+                    <a class="front-teaser css-teaser" data-teaser="css" href="/css/z-index/">
+                        <h3>The Mighty CSS z-index Property</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/css/" aria-label="More CSS posts">All CSS Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-ng">
+                <img src="https://d33wubrfki0l68.cloudfront.net/e43a6aa17a128037b8562069b398163e13e2930c/acfbe/images/logos/angular-logo.svg" alt="Angular logo" width="32">Angular 2+
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/component-communication/">
+                        <h3>Component Communication in Angular</h3>
+                    </a>
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/custom-validation/">
+                        <h3>Custom Form Validation in Angular</h3>
+                    </a>
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/angular-and-leaflet-shape-service/">
+                        <h3>Building Maps in Angular using Leaflet, Part 4: The Shape Service</h3>
+                    </a>
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/angular-and-leaflet-popup-service/">
+                        <h3>Building Maps in Angular using Leaflet, Part 3: The Popup Service</h3>
+                    </a>
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/angular-and-leaflet-marker-service/">
+                        <h3>Building Maps in Angular using Leaflet, Part 2: The Marker Service</h3>
+                    </a>
+                    <a class="front-teaser angular-teaser" data-teaser="angular" href="/angular/angular-and-leaflet/">
+                        <h3>Building Maps in Angular Using Leaflet, Part 1: Generating Maps</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/angular/" aria-label="More Angular posts">All Angular Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-workflow">Workflow</p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/github-cli/">
+                        <h3>Taking a Look at the GitHub CLI Tool</h3>
+                    </a>
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/auto-eslinting/">
+                        <h3>Linting on Save with Visual Studio Code and ESLint</h3>
+                    </a>
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/deploying-docker-app/">
+                        <h3>Deploying a Docker Application with AWS</h3>
+                    </a>
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/intro-to-kubernetes/">
+                        <h3>Introduction to Kubernetes</h3>
+                    </a>
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/multiple-containers-docker-compose/">
+                        <h3>Working with Multiple Containers Using Docker Compose</h3>
+                    </a>
+                    <a class="front-teaser workflow-teaser" data-teaser="workflow" href="/workflow/publishing-first-package-to-npm/">
+                        <h3>How To: Publishing Your First Package to npm</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/workflow/" aria-label="More Workflow posts">All Workflow Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-gatsby">
+                <img src="https://d33wubrfki0l68.cloudfront.net/39d2d2905588dad289b228deb021d51449f6143d/a3baf/images/logos/gatsby-logo.svg" alt="Gatsby logo" width="32">Gatsby
+            </p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/react-hooks-gatsby/">
+                        <h3>Using React Hooks in Gatsby</h3>
+                    </a>
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/pagination-in-gatsby/">
+                        <h3>Pagination in Gatsby Using gatsby-awesome-pagination</h3>
+                    </a>
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/exploring-tina-cms/">
+                        <h3>Exploring TinaCMS with Gatsby</h3>
+                    </a>
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/state-management-in-gatsby/">
+                        <h3>State Management in Gatsby using the wrapRootElement Hook</h3>
+                    </a>
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/internationalized-menu/">
+                        <h3>Internationalized Navigation Menu in Gatsby.js</h3>
+                    </a>
+                    <a class="front-teaser gatsbyjs-teaser" data-teaser="gatsbyjs" href="/gatsbyjs/create-a-multilanguage-site/">
+                        <h3>Creating a Multilingual Website with Gatsby &Cosmic JS</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/gatsbyjs/" aria-label="More Gatsby.js posts">All Gatsby Posts</a>
+            </p>
+            <hr>
+            <p class="text-center front-category front-category-nodejs">Node.js</p>
+            <div class="row">
+                <div class="front-flex">
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/express-cookies/">
+                        <h3>Sending and Receiving Cookies from Express.js</h3>
+                    </a>
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/node-cron/">
+                        <h3>Scheduling Tasks in Node.js with node-cron</h3>
+                    </a>
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/jwt-expressjs/">
+                        <h3>JSON Web Tokens (JWTs) in Express.js</h3>
+                    </a>
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/npm-yarn-cheatsheet/">
+                        <h3>npm vs Yarn Commands Cheat Sheet</h3>
+                    </a>
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/server-sent-events-build-realtime-app/">
+                        <h3>Using Server-Sent Events in Node.js to Build a Realtime App</h3>
+                    </a>
+                    <a class="front-teaser nodejs-teaser" data-teaser="nodejs" href="/nodejs/npm-commands-you-should-know/">
+                        <h3>npm Commands and Features You Should Know</h3>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a class="button small" href="/nodejs/" aria-label="More Node.js posts">All Node.js Posts</a>
+            </p>
+        </div>
+        <div class="algolia__search-content js-algolia__search-content">
+            <div class="t30">
+                <article>
+                    <header>
+                        <button class="search__clear button" aria-label="Clear search results">&#10006;Clear</button>
+                        <h3 class="b30 t20 search-results">🕵 Search Results</h3>
+                    </header>
+                    <div class="algolia__results">
+                        <p class="text-center" style="column-span: all">🔎 Searching...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <footer>
+            <div class="wrap-subfooter">
+                <div class="subfooter">
+                    <div style="border: none;"></div>
+                    <div>
+                        <a href="/info/">About</a>
+                    </div>
+                    <div>
+                        <a href="/credits/">Credits</a>
+                    </div>
+                    <div>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                    <div>
+                        <a href="https://www.iubenda.com/privacy-policy/583339" target="blank" rel="noopener">Privacy</a>
+                    </div>
+                    <div class="sub-sub-footer">
+                        <p>
+                            Note that we link to certain 3rd party products via affiliate or sponsored links. You can <a rel="nofollow" href="/about-sponsored-or-affiliate/">learn more about it here</a>
+                            .
+                        </p>
+                        <p>
+                            Code snippets licensed under <a href="https://oss.ninja/mit?organization=Alligator.io">MIT</a>
+                            , unless otherwise noted. <br>Content &amp;Graphics © 2020 Alligator.io LLC
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <link rel='preload' as='style' property='stylesheet' onload='this.onload=null;this.rel="stylesheet"' href='https://d33wubrfki0l68.cloudfront.net/css/ed717dd04ecfbfcfa24ca6b9d11689e762c80446/assets/css/c.css'/>
+        <noscript>
+            <link rel='stylesheet' property='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/ed717dd04ecfbfcfa24ca6b9d11689e762c80446/assets/css/c.css'/>
+        </noscript>
+        <script>
+            /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+            !function(t) {
+                "use strict";
+                t.loadCSS || (t.loadCSS = function() {}
+                );
+                var e = loadCSS.relpreload = {};
+                if (e.support = function() {
+                    var e;
+                    try {
+                        e = t.document.createElement("link").relList.supports("preload")
+                    } catch (t) {
+                        e = !1
+                    }
+                    return function() {
+                        return e
+                    }
+                }(),
+                e.bindMediaToggle = function(t) {
+                    var e = t.media || "all";
+                    function a() {
+                        t.media = e
+                    }
+                    t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a),
+                    setTimeout(function() {
+                        t.rel = "stylesheet",
+                        t.media = "only x"
+                    }),
+                    setTimeout(a, 3e3)
+                }
+                ,
+                e.poly = function() {
+                    if (!e.support())
+                        for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) {
+                            var o = a[n];
+                            "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0),
+                            e.bindMediaToggle(o))
+                        }
+                }
+                ,
+                !e.support()) {
+                    e.poly();
+                    var a = t.setInterval(e.poly, 500);
+                    t.addEventListener ? t.addEventListener("load", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    }) : t.attachEvent && t.attachEvent("onload", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    })
+                }
+                "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS
+            }("undefined" != typeof global ? global : this);
+        </script>
+        <script>
+            window.ALGOLIA_CONFIG = {
+                applicationId: "FQ1L1MP2SI",
+                indexName: "alligator_content",
+                apiKey: "db955bb5585ab90c4c24cb8728718795",
+                baseurl: ""
+            };
+        </script>
+        <script id="algolia__template" type="text/template">
+            <div class="algolia__result"> <a class="algolia__result-link" href="{{ full_url }}">{{{ _highlightResult.title.value }}}</a><div class="algolia__result-text">{{{ _highlightResult.content.value }}}</div></div>
+        </script>
+        <script id="algolia__template--no-results" type="text/template">
+            <p class="text-center" style="column-span: all">Oh noes, nothing found 😩</p>
+        </script>
+        <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/e2203d1b1c14952473222bcff4c58a8bd9fef14a.js'></script>
+    </body>
+</html>
