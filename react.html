@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="globalsign-domain-verification" content="HtuxAdfAkg_UH35wjkpxrVtjHs1FRjXqL_V81YIv2t"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#138e69">
+        <title>Posts About React &larr;Alligator.io</title>
+        <link rel='dns-prefetch' href='https://alligator.io'>
+        <style>
+            :root {
+                --bg: #fff;
+                --bg2: #fafafa;
+                --bg3: #fcfcfc;
+                --bg4: #f8f8f8;
+                --footer-bg: rgba(114,186,94,.15);
+                --code: #dc3958;
+                --code-text: #6C7757;
+                --code-comment: #9AA880;
+                --text-color: #555;
+                --pale-text: #999;
+                --info-box-text: #84613d;
+                --gs0: #eee;
+                --gs1: #CCC;
+                --gs2: #AAA;
+                --green1: #008f68;
+                --green2: #6DB65B;
+                --green3: #4AAE9B;
+                --yellow1: #EFBB35;
+                --yellow2: #dfa612;
+                --yellow3: #FAE042;
+                --subtle: rgba(0, 0, 0, .1);
+                --very-subtle: rgba(0, 0, 0, .05);
+                --top1: rgba(107, 183, 86, .95);
+                --top2: rgba(0, 143, 104, .95);
+                --subtle-green1: rgba(114, 186, 94, 0.55);
+                --subtle-green2: rgba(114, 186, 94, 0.05);
+                --subtle-yellow1: rgba(239, 187, 53, 0.6);
+                --subtle-yellow2: rgba(236, 198, 48, .1);
+                --subtle-yellow3: rgba(236, 198, 48, .3);
+                --fb: #3b5998;
+                --reddit: #FC471E;
+                --h-news: #F60;
+                --twitter: #00aced;
+                --cat-head: rgba(114, 186, 94, 0.1);
+                --front-text-color: #93a791;
+                --info-box-bg: rgba(255, 213, 70, 0.1)
+            }
+
+            .dark {
+                --bg: #222831;
+                --bg2: #181C22;
+                --bg3: #1A1D24;
+                --bg4: black;
+                --footer-bg: rgba(0, 0, 0, .3);
+                --code: #F59BAC;
+                --code-text: #FAD7A0;
+                --code-text: #FEE6C0;
+                --code-comment: #81899B;
+                --text-color: #F9FFEE;
+                --pale-text: #dfa612;
+                --info-box-text: antiquewhite;
+                --gs0: rgba(239, 187, 53, 0.6);
+                --gs1: rgba(239, 187, 53, 0.6);
+                --green1: #EFBB35;
+                --green2: #E84279;
+                --green3: #dfa612;
+                --top1: #302E24;
+                --top2: #28313E;
+                --subtle-green1: rgba(236, 198, 48, .1);
+                --subtle-green2: #1A1D24;
+                --subtle-yellow3: rgba(236, 198, 48, .1);
+                --fb: #fff;
+                --reddit: #fff;
+                --h-news: #fff;
+                --twitter: #fff;
+                --cat-head: #1A1D24;
+                --front-text-color: antiquewhite;
+                --info-box-bg: #1A1D24
+            }
+
+            @font-face {
+                font-family: "Recursive";
+                src: url("https://d33wubrfki0l68.cloudfront.net/0fb48cf42677cf004e48f2608a8521a4ca06b48d/8a39e/assets/fonts/recursive-mono_casl_wght_slnt_ital--2019_11_05-00_13.woff2") format("woff2-variations");
+                font-weight: 300 900;
+                font-display: swap
+            }
+
+            time[datetime],span.author,span.sponsored {
+                border: 2px solid rgba(220,57,88,0.15);
+                border-radius: 6px;
+                padding: .3rem .75rem;
+                font-size: .85rem;
+                color: var(--code);
+                white-space: nowrap;
+                margin-top: .3rem;
+                display: inline-block
+            }
+
+            span.author a {
+                color: var(--code)
+            }
+
+            .top,.tweet-it {
+                opacity: 0;
+                transform: translateY(7rem)
+            }
+
+            img,svg {
+                height: auto;
+                display: inline-block;
+                max-width: 100%;
+                vertical-align: middle;
+                border: 0
+            }
+
+            pre {
+                overflow: auto;
+                margin: 2rem 0;
+                clear: both
+            }
+
+            strong {
+                font-weight: 500
+            }
+
+            .button,a,button {
+                text-decoration: none
+            }
+
+            .button,.top-bar,body,button {
+                position: relative
+            }
+
+            html {
+                font-size: 16px
+            }
+
+            *,*:after,*:before {
+                box-sizing: border-box
+            }
+
+            article ol li,article p,article ul li {
+                font-size: 25px
+            }
+
+            body {
+                background: var(--bg);
+                color: var(--text-color);
+                padding: 0;
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+                line-height: 1.6;
+                font-weight: 300;
+                transition: background-color .25s ease-out
+            }
+
+            hr {
+                width: 15%;
+                border: 0;
+                border-top: 4px solid var(--yellow3);
+                margin: 2.5em auto 2.3em
+            }
+
+            .right {
+                float: right;
+                margin-right: 1em
+            }
+
+            .alligator-logo {
+                transition: transform 0.1s cubic-bezier(0, 1.8, 1, 1.8);
+                transform: translateY(0.7em);
+            }
+
+            .main-article {
+                display: grid;
+                grid-template-columns: minmax(200px, 3fr) 1fr;
+                grid-gap: 4rem
+            }
+
+            @media (max-width: 1120px) {
+                .main-article {
+                    grid-template-columns:100%
+                }
+            }
+
+            .row {
+                max-width: 55rem;
+                margin: 0 auto;
+                padding: 0 .9rem;
+                position: relative
+            }
+
+            .article-row {
+                max-width: 75rem
+            }
+
+            .main-article aside {
+                margin-top: 1.9em
+            }
+
+            input[type=text],input[type=email],input[type=search],textarea {
+                -webkit-appearance: none;
+                border-style: solid;
+                border-width: 1px;
+                border-color: var(--gs1);
+                box-shadow: inset 0 1px 2px var(--subtle);
+                display: block;
+                padding: .5rem;
+                width: 100%;
+                transition: box-shadow .45s, border-color .45s ease-in-out;
+                background: var(--bg3);
+                color: var(--text-color)
+            }
+
+            .top-bar {
+                overflow: hidden;
+                height: 3.75rem;
+                background: linear-gradient(to right, rgba(107,183,86,0.95), #008f68);
+                background: linear-gradient(to right, var(--top1), var(--top2));
+                margin-bottom: 0;
+                z-index: 1
+            }
+
+            .top-bar .title-area {
+                margin: 0
+            }
+
+            .top-bar .name div {
+                line-height: 3.75rem;
+                padding: 0 1.25rem
+            }
+
+            .top-bar .name div a {
+                color: #fff
+            }
+
+            @media (min-width: 1121px) {
+                a.angular {
+                    border-bottom:3px solid #DD0031
+                }
+
+                a.vuejs {
+                    border-bottom: 3px solid #41B883
+                }
+
+                a.react {
+                    border-bottom: 3px solid #61dafb
+                }
+
+                a.css {
+                    border-bottom: 3px solid #3399FE
+                }
+
+                a.javascript {
+                    border-bottom: 3px solid #F7DF1E
+                }
+
+                a.gatsby {
+                    border-bottom: 3px solid rebeccapurple
+                }
+            }
+
+            .toggle-topbar {
+                position: absolute;
+                right: 0;
+                top: 17px
+            }
+
+            .toggle-topbar.menu-icon a {
+                padding: 0 1rem;
+                color: #fff
+            }
+
+            .top-bar.expanded {
+                height: auto
+            }
+
+            .top-bar-section {
+                position: relative
+            }
+
+            .top-bar-section .special {
+                background: white;
+                color: #525252;
+                padding: .45rem;
+                border-radius: 4px;
+                color: #525252;
+                transition: opacity .25s ease-out
+            }
+
+            .top-bar-section ul {
+                width: 100%;
+                margin: 0
+            }
+
+            .top-bar-section ul li {
+                height: 3.7em
+            }
+
+            .top-bar-section ul li>a {
+                display: block;
+                width: 100%;
+                color: #fff;
+                font-size: .9rem
+            }
+
+            .top-bar-section ul li.active>a {
+                background: var(--subtle);
+                color: #fff
+            }
+
+            .breadcrumbs {
+                text-align: center;
+                margin-top: 4.5rem;
+                text-transform: uppercase
+            }
+
+            .text-center,footer,header {
+                text-align: center
+            }
+
+            div,form,li,ol,p,ul {
+                margin: 0;
+                padding: 0
+            }
+
+            ol,p,ul {
+                margin-bottom: 1.25rem
+            }
+
+            p {
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+                -ms-word-break: normal;
+                word-break: normal
+            }
+
+            h1,h2,h3,h4 {
+                color: var(--green1);
+                margin-top: .2rem;
+                margin-bottom: 1rem;
+                line-height: 1;
+                font-weight: 200
+            }
+
+            h2,h3 {
+                font-weight: 300
+            }
+
+            ol,ul {
+                margin-left: 20px;
+                padding: 0;
+                list-style-type: none
+            }
+
+            @media only screen {
+                .medium-down {
+                    display: inherit
+                }
+
+                .large-up {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 40.063em) {
+                h1 {
+                    font-size:2.75rem
+                }
+
+                h2 {
+                    font-size: 2.25rem
+                }
+
+                h3 {
+                    font-size: 2rem
+                }
+
+                h4 {
+                    font-size: 1.4rem
+                }
+
+                .medium-down {
+                    display: inherit
+                }
+
+                .large-up {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 90.063em) {
+                header {
+                    margin-top:7rem
+                }
+
+                .large-up {
+                    display: inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+            }
+
+            @media only screen and (min-width: 120.063em) {
+                .large-up {
+                    display:inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+            }
+
+            a,a:link {
+                transition: all .2s;
+                color: var(--yellow2)
+            }
+
+            div[itemprop] a,.foot-panel.more-posts h3 a {
+                text-decoration: underline;
+                text-decoration-color: var(--subtle-yellow3);
+                -webkit-text-decoration-skip: ink;
+                text-decoration-skip: ink
+            }
+
+            img,pre {
+                border-radius: 3px
+            }
+
+            h1,.foot-panel h3,.wrap-site-sponsors h3,.subscribe-follow h4,.footer-panels a,#_default_ a._default_ .default-title,#_default_ a._default_ .default-description,.vscode-pro h4,.vscode-pro a,.algolia__result-link {
+                font-family: Recursive, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, 'Open Sans', FreeSans, sans-serif;
+                font-variation-settings: "CASL" 0, "slnt" -5
+            }
+
+            .file-desc,time[datetime],code,code.highlighter-rouge,.breadcrumbs>*,span.author,span.sponsored,.related-posts h4,.related-posts .front-teaser,.subfooter,blockquote p,.post-meta,footer a,.subfooter a {
+                font-family: Recursive, 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+                font-variation-settings: "MONO" 1;
+                font-weight: 450
+            }
+
+            footer a {
+                font-weight: 300
+            }
+
+            h1 {
+                font-size: 3.7em;
+                margin-bottom: .2em
+            }
+
+            h2 {
+                margin: .8em 0 0;
+                padding-bottom: 0.4em
+            }
+
+            h4 {
+                margin: 1.15em 0
+            }
+
+            pre {
+                background: var(--bg3);
+                padding: 5px 20px;
+                border: 2px solid var(--very-subtle)
+            }
+
+            code {
+                font-size: 1.25rem
+            }
+
+            @media (min-width: 2050px) {
+                pre {
+                    margin-left:-15rem
+                }
+
+                code {
+                    font-size: 1.35rem
+                }
+            }
+
+            @media (min-width: 1850px) and (max-width: 2049px) {
+                pre {
+                    margin-left:-8rem
+                }
+
+                code {
+                    font-size: 1.3rem
+                }
+            }
+
+            #navigation {
+                box-shadow: 0 2px 20px 0 var(--subtle)
+            }
+
+            .t20 {
+                margin-top: 20px
+            }
+
+            article h2,article h3 {
+                font-family: Recursive;
+                font-variation-settings: "slnt" -10, "CASL" 0;
+                margin: 2em 0 .8em;
+                padding-bottom: 0;
+                display: flex
+            }
+
+            article h2 {
+                color: var(--yellow1);
+                font-weight: 400;
+                transition: font-variation-settings .25s ease-out
+            }
+
+            .rrssb-buttons li {
+                opacity: .65;
+                transition: all .26s
+            }
+
+            .rrssb-buttons {
+                display: flex;
+                justify-content: space-around;
+                margin: 1.7em auto 1.2em;
+                max-width: 200px
+            }
+
+            .hide,.ciu_embed,li.has-dropdown,.algolia__search-content,.foot-panel.hide {
+                display: none
+            }
+
+            @media only screen and (min-width: 70em) {
+                .front-teaser:hover {
+                    transform:translateY(-2px)
+                }
+
+                li.extra-menu {
+                    display: none
+                }
+
+                li.has-dropdown {
+                    display: list-item;
+                    position: relative
+                }
+
+                li.has-dropdown:hover ul.dropdown,li.has-dropdown:focus-within ul.dropdown {
+                    opacity: 1;
+                    pointer-events: auto
+                }
+
+                .top-bar .title-area,.top-bar-section ul li {
+                    float: left
+                }
+
+                .top-bar {
+                    overflow: visible
+                }
+
+                .top-bar:after,.top-bar:before {
+                    content: " ";
+                    display: table
+                }
+
+                .top-bar:after {
+                    clear: both
+                }
+
+                .top-bar .toggle-topbar {
+                    display: none
+                }
+
+                .top-bar input {
+                    font-size: .875rem;
+                    position: relative;
+                    height: 2rem;
+                    top: 0.875rem
+                }
+
+                .top-bar-section ul {
+                    width: auto
+                }
+
+                .top-bar-section li a {
+                    padding: 0 1.25rem;
+                    line-height: 3.75rem
+                }
+
+                .large-up {
+                    display: inherit
+                }
+
+                .medium-down {
+                    display: none
+                }
+
+                h1 {
+                    padding: 0 0.8em
+                }
+            }
+
+            p.snip-first,div[itemprop="articleSection"]>p:first-of-type {
+                margin-bottom: 1em;
+                margin-top: 1.9em;
+                border-left: 4px solid var(--yellow3);
+                padding-left: .8em;
+                text-align: justify
+            }
+
+            em,span.char,span.keyboard {
+                background-color: var(--subtle-yellow2);
+                line-height: inherit;
+                padding: 5px 7px 0;
+                white-space: pre-wrap;
+                border-bottom: 2px solid var(--subtle-yellow3);
+                font-style: normal;
+                border-radius: 4px
+            }
+
+            .front-teaser {
+                margin: 1em .7em;
+                border-radius: 3px;
+                border-bottom-right-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 1px 1px 15px rgba(67,38,100,0.15);
+                padding: 1.85rem;
+                background: var(--bg3)
+            }
+
+            .dark .a404,.solarized-dark .a404 {
+                filter: grayscale(1) brightness(9)
+            }
+
+            .front-teaser h3 {
+                font-size: 1.4em;
+                color: var(--green3);
+                text-align: center;
+                font-weight: 300;
+                margin: 0
+            }
+
+            @media only screen and (max-width: 40em) {
+                code {
+                    font-size:1rem
+                }
+
+                article ol li,article p,article ul li {
+                    font-size: 1.25em
+                }
+
+                article h2,h2 {
+                    font-size: 1.5em
+                }
+
+                article h3 {
+                    font-size: 1.2em;
+                    line-height: 1.4
+                }
+
+                article h3#side-get-newsletter {
+                    line-height: 1
+                }
+
+                h1 {
+                    font-size: 2em;
+                    margin: 0.45em 0 0.4em
+                }
+
+                pre {
+                    padding: 5px 3px
+                }
+
+                .front-teaser {
+                    font-size: .6em
+                }
+
+                .front-teaser h3 {
+                    font-size: 1.7em
+                }
+            }
+
+            .breadcrumbs>a {
+                color: var(--code)
+            }
+
+            input.algolia__input,input.bottom-subscribe {
+                border-radius: 8px;
+                font-size: 17px
+            }
+
+            input.algolia__input {
+                background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiIGQ9Ik0zMSAyNy4ybC03LjYtNi40Yy0uOC0uNy0xLjYtMS0yLjMtMSAyLTIgMy00LjggMy03LjggMC02LjYtNS40LTEyLTEyLTEyUzAgNS40IDAgMTJzNS40IDEyIDEyIDEyYzMgMCA1LjctMSA3LjgtMyAwIC44LjMgMS42IDEgMi40bDYuNCA3LjZjMSAxLjIgMyAxLjMgNCAuMnMxLTMtLjItNHpNMTIgMjBjLTQuNCAwLTgtMy42LTgtOHMzLjYtOCA4LTggOCAzLjYgOCA4LTMuNiA4LTggOHoiLz48L3N2Zz4=") 7px 50%/1em 1em no-repeat rgba(0,0,0,0.1);
+                transition: all .2s ease-out;
+                width: 140px;
+                padding-left: 1.8em;
+                border-color: var(--subtle);
+                color: #fff;
+                padding-bottom: 0;
+                padding-top: 0
+            }
+
+            @media only screen and (max-width: 40em), only screen and (min-width: 40.063em) and (max-width: 70em) {
+                input.algolia__input {
+                    position:relative;
+                    left: 0.7em;
+                    top: 1.3em;
+                    display: inline-block;
+                    background-size: 12px 12px;
+                    height: 28px
+                }
+
+                .wrap-search input.algolia__input:focus {
+                    width: 130px
+                }
+
+                .wrap-search {
+                    position: absolute;
+                    right: 70px;
+                    top: -66px
+                }
+
+                .top-bar-section ul li:nth-child(2) {
+                    margin-top: 1em
+                }
+
+                .top-bar-section ul li>a {
+                    font-size: 1.2em
+                }
+
+                .top-bar-section ul li {
+                    height: 3em
+                }
+
+                .left,.right {
+                    text-align: center
+                }
+            }
+
+            .rrssb-buttons svg {
+                height: 22px;
+                width: 22px
+            }
+
+            .info-box {
+                background: var(--info-box-bg);
+                padding: 0.8em;
+                margin-top: 1.8rem;
+                border-left: 4px solid rgba(236,198,48,0.5);
+                color: var(--info-box-text);
+                line-height: 1.4;
+                text-align: center;
+                position: relative;
+                clear: both
+            }
+
+            .top-bar-section ul.dropdown {
+                width: 510px;
+                position: absolute;
+                transition: opacity .15s ease-out;
+                padding: 0;
+                z-index: 99;
+                overflow: hidden;
+                pointer-events: none;
+                opacity: 0;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                box-shadow: 0px 2px 8px var(--subtle);
+                background: var(--green1);
+                border-top: 2px solid var(--yellow3);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                transform: translateX(-40%)
+            }
+
+            .dark .top-bar-section ul.dropdown,.solarized-dark .top-bar-section ul.dropdown {
+                background: var(--top2)
+            }
+
+            input.bottom-subscribe {
+                max-width: 250px;
+                text-align: center;
+                display: block;
+                border-color: var(--green2);
+                border-width: 2px;
+                height: 2.5em;
+                margin: 0 auto;
+                margin-bottom: .8em;
+                background: var(--bg);
+                color: var(--text-color)
+            }
+
+            .foot-panel.newsletter-form {
+                margin-top: 1.5rem
+            }
+
+            h3#side-get-newsletter,div.twitter h3 {
+                font-size: 1.6rem;
+                display: block
+            }
+
+            .foot-panel.more-posts h3,.foot-panel.site-sponsors h3 {
+                color: var(--yellow1)
+            }
+
+            .foot-panel.site-sponsors svg {
+                max-height: 35px
+            }
+
+            .foot-panel.more-posts a {
+                color: inherit
+            }
+
+            .foot-panel.more-posts a.all-posts,.foot-panel.site-sponsors a.about-sponsors {
+                color: var(--code);
+                text-decoration: underline;
+                display: inline-block;
+                margin-top: .5rem
+            }
+
+            a.site-sponsor-link {
+                color: var(--code)
+            }
+
+            .foot-panel.more-posts h4:not(:last-child)::after,.site-sponsor:not(:last-child)::after {
+                width: 2.5rem;
+                height: 2px;
+                background: var(--green2);
+                content: " ";
+                display: block;
+                margin: 0px auto;
+                position: relative;
+                top: 1rem
+            }
+
+            .foot-panel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin-top: 2rem;
+                text-align: center;
+                margin-bottom: 2rem
+            }
+
+            .more-posts,.newsletter-form,.tw-follow,.site-sponsors,#codefund,#native-js2 {
+                border-radius: 3px;
+                background: var(--bg2);
+                overflow: visible;
+                padding: 2rem;
+                box-shadow: 0px 2px 5px var(--very-subtle)
+            }
+
+            .site-sponsor {
+                max-width: 90%;
+                margin-top: 1rem
+            }
+
+            .site-sponsor p {
+                font-size: 1rem;
+                font-weight: 200;
+                margin-bottom: 0;
+                margin-top: .5rem;
+                line-height: 1.2
+            }
+
+            #native-js2 {
+                padding: 0
+            }
+
+            #native-js2 .native-details {
+                color: var(--text-color);
+                padding: 1rem;
+                text-align: center;
+                margin-right: 0;
+                box-shadow: 0px 2px 5px var(--very-subtle)
+            }
+
+            #native-js2 .native-img {
+                max-height: unset;
+                margin-right: 0;
+                text-align: center;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0
+            }
+
+            #native-js2 .native-img img {
+                max-width: 175px;
+                padding: 1rem 0
+            }
+
+            #codefund {
+                padding: 0;
+                float: right;
+                max-width: 235px;
+                margin: 3.5rem 0 1rem 1rem
+            }
+
+            @media (min-width: 1120px) {
+                #codefund {
+                    position:relative;
+                    left: 4rem;
+                    bottom: 2rem
+                }
+
+                .foot-panel.more-posts:first-child {
+                    margin-top: 23rem
+                }
+            }
+
+            #codefund a {
+                color: var(--text-color);
+                text-decoration: none
+            }
+
+            #codefund .cf-text {
+                padding: 0 0.25rem 0.5rem;
+                display: block;
+                font-size: 15px;
+                line-height: 1.3
+            }
+
+            #codefund .cf-img {
+                width: 100%;
+                padding-bottom: 0.7rem
+            }
+
+            #codefund em {
+                padding: 0;
+                background-color: transparent;
+                border-bottom: none;
+                font-style: italic
+            }
+
+            #codefund strong {
+                font-weight: bold
+            }
+
+            @media only screen and (max-width: 600px) {
+                #codefund {
+                    float:none;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-left: 0;
+                    margin-top: .5rem
+                }
+            }
+
+            .site-sponsors,#codefund,.recommended {
+                border-bottom: 3px solid var(--code);
+                border-image-source: linear-gradient(to right, #008f68, #fae042);
+                border-image-slice: 1;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0
+            }
+
+            .site-sponsors img {
+                margin-bottom: 1rem;
+                margin-top: .5rem
+            }
+
+            .tw-follow {
+                background: #00aced
+            }
+
+            .tw-follow {
+                width: 100%;
+                margin-top: 0
+            }
+
+            .tw-follow a {
+                color: white
+            }
+
+            .foot-panel h3,.wrap-site-sponsors h3 {
+                letter-spacing: -1px;
+                font-size: 1.3rem
+            }
+
+            .foot-panel h4 {
+                font-size: 1.2rem;
+                margin: 0.85em 0
+            }
+
+            .button,button.small,div a.button {
+                background-image: linear-gradient(to bottom, var(--bg), var(--bg4));
+                border-radius: 8px;
+                color: var(--green3);
+                letter-spacing: 1px;
+                padding: 10px 20px;
+                border: 0;
+                box-shadow: 0 0 10px var(--subtle);
+                font: inherit;
+                text-decoration: none;
+                transition: transform 0.15s cubic-bezier(0, 1.8, 1, 1.8)
+            }
+
+            .native-js {
+                transform: translateY(calc(100% - 35px));
+                visibility: hidden;
+                opacity: 0;
+                display: none
+            }
+
+            .recommended {
+                padding: 5rem 2rem 0.6rem 2rem;
+                background: var(--bg2);
+                border-radius: 3px;
+                position: relative;
+                -webkit-clip-path: polygon(0 0, 5% 5%, 10% 0, 15% 5%, 20% 0, 25% 5%, 30% 0, 35% 5%, 40% 0, 45% 5%, 50% 0, 55% 5%, 60% 0, 65% 5%, 70% 0, 75% 5%, 80% 0, 85% 5%, 90% 0, 95% 5%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 5% 5%, 10% 0, 15% 5%, 20% 0, 25% 5%, 30% 0, 35% 5%, 40% 0, 45% 5%, 50% 0, 55% 5%, 60% 0, 65% 5%, 70% 0, 75% 5%, 80% 0, 85% 5%, 90% 0, 95% 5%, 100% 0, 100% 100%, 0 100%);
+                clear: both
+            }
+
+            .recommended h4 {
+                margin-top: 0;
+                font-weight: 400;
+                color: var(--yellow2);
+                font-family: Recursive
+            }
+
+            .recommended p {
+                padding-left: 2rem;
+                padding-top: .5rem
+            }
+
+            @media (max-width: 600px) {
+                .recommended p {
+                    line-height:1.2;
+                    font-size: 1.2rem;
+                    padding-left: 0
+                }
+            }
+
+            .recommended p span {
+                border-bottom: 3px solid var(--subtle-green1)
+            }
+
+            div.recommended a {
+                text-decoration: var(--subtle-yellow1) double underline
+            }
+
+            .about-link {
+                padding-top: 1rem;
+                text-align: right;
+                right: .4rem;
+                top: .4rem
+            }
+
+            .about-link a {
+                font-size: 1rem
+            }
+
+            p.front-category {
+                margin-bottom: 0;
+                font-size: 1.5em;
+                margin-top: 1.5em
+            }
+
+            p.front-category img {
+                vertical-align: text-bottom;
+                border-radius: 0
+            }
+
+            .wrap-doodle {
+                position: relative;
+                z-index: 0
+            }
+
+            .top-doodle {
+                position: absolute;
+                top: 0;
+                left: 0
+            }
+
+            .no-doodle-support css-doodle {
+                display: none
+            }
+
+            .cat-head {
+                margin-bottom: 2em;
+                padding: 2em 0;
+                background: linear-gradient(to bottom, var(--cat-head), var(--bg))
+            }
+
+            .cat-head img,.cat-head h1 {
+                position: relative
+            }
+
+            .cat-head img {
+                max-width: 18%;
+                border-radius: 0
+            }
+
+            .alligator-head {
+                -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+                clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0)
+            }
+
+            .alligator-head {
+                background-color: #6bb756;
+                background: linear-gradient(to right, rgba(107,183,86,0.95), rgba(0,143,104,0.95));
+                background: linear-gradient(to right, var(--top1), var(--top2));
+                margin-bottom: 1em;
+                padding-bottom: 3.5em
+            }
+
+            .alligator-head img:hover {
+                animation: colorrr 10s infinite
+            }
+
+            @keyframes colorrr {
+                0% {
+                    filter: hue-rotate(0deg)
+                }
+
+                50% {
+                    filter: hue-rotate(360deg)
+                }
+            }
+
+            div.alligator-head img {
+                margin: 2em 0 0;
+                width: 180px;
+                height: 180px
+            }
+
+            div.alligator-head p {
+                font-size: 1.2em;
+                padding: 0 1em
+            }
+
+            div.alligator-head h1 {
+                font-size: 3em
+            }
+
+            div.front-flex {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr
+            }
+
+            @media only screen and (min-width: 30em) and (max-width: 64em) {
+                div.front-flex {
+                    grid-template-columns:1fr 1fr
+                }
+            }
+
+            @media only screen and (max-width: 30em) {
+                div.front-flex {
+                    grid-template-columns:1fr
+                }
+            }
+
+            @media only screen and (max-width: 40em) {
+                div.category a.front-teaser p {
+                    line-height:1.3
+                }
+
+                .alligator-head h1 {
+                    font-size: 1.3em !important;
+                    letter-spacing: 0;
+                    padding: 0 .5em;
+                    margin-top: 1em
+                }
+
+                .cat-head h1 {
+                    font-size: 2em;
+                    padding: 0 2em
+                }
+
+                .cat-head {
+                    padding-bottom: .7em;
+                    padding-top: 1em
+                }
+
+                .alligator-head p {
+                    font-size: 0.9em !important;
+                    padding: 0 2em !important
+                }
+
+                div.alligator-head img {
+                    width: 110px;
+                    height: 110px
+                }
+            }
+
+            div.alligator-head h1,div.alligator-head p {
+                color: #fff;
+                text-shadow: 0 0 14px rgba(0,0,0,0.28)
+            }
+
+            .angular-teaser,.ionic-teaser,.typescript-teaser,.css-teaser,.js-teaser,.html-teaser,.web-components-teaser,.sass-teaser,.svg-teaser,.vuejs-teaser,.jekyll-teaser,.react-teaser,.graphql-teaser,.flow-teaser,.nodejs-teaser,.rxjs-teaser,.stencil-teaser,.workflow-teaser,.polymer-teaser,.redux-teaser,.gatsbyjs-teaser,.svelte-teaser,.flutter-teaser {
+                background: var(--bg3) linear-gradient(135deg, var(--c) 10px, rgba(0,0,0,0.01) 0)
+            }
+
+            .angular-teaser,.front-category-ng {
+                --c: #DD0031
+            }
+
+            .ionic-teaser,.front-category-ionic {
+                --c: #4B8DFB
+            }
+
+            .typescript-teaser,.front-category-typescript {
+                --c: #007ACC
+            }
+
+            .css-teaser,.front-category-css {
+                --c: #3399FE
+            }
+
+            .js-teaser,.front-category-js {
+                --c: #F7DF1E
+            }
+
+            .html-teaser,.web-components-teaser {
+                --c: #F16528
+            }
+
+            .sass-teaser {
+                --c: #CF649A
+            }
+
+            .svg-teaser {
+                --c: #FF9900
+            }
+
+            .vuejs-teaser,.front-category-vuejs {
+                --c: #41B883
+            }
+
+            .jekyll-teaser {
+                --c: #D20000
+            }
+
+            .react-teaser,.front-category-react {
+                --c: #61dafb
+            }
+
+            .graphql-teaser {
+                --c: #E535AB
+            }
+
+            .flow-teaser {
+                --c: #E8BD36
+            }
+
+            .nodejs-teaser,.front-category-nodejs {
+                --c: #336633
+            }
+
+            .rxjs-teaser {
+                --c: #64008D
+            }
+
+            .stencil-teaser {
+                --c: #000
+            }
+
+            .workflow-teaser,.front-category-workflow {
+                --c: #f442c2
+            }
+
+            .polymer-teaser {
+                --c: #FF4C89
+            }
+
+            .redux-teaser {
+                --c: #764ABC
+            }
+
+            .gatsbyjs-teaser {
+                --c: rebeccapurple
+            }
+
+            .svelte-teaser,.front-category-svelte {
+                --c: #FF3E00
+            }
+
+            .flutter-teaser {
+                --c: #0276e8
+            }
+
+            .front-category {
+                color: var(--c)
+            }
+
+            a.top-teaser {
+                background-color: rgba(0,143,104,0.95);
+                background-color: var(--top2);
+                box-shadow: 1px 1px 15px 4px rgba(67,38,100,0.15)
+            }
+
+            .dark a.top-teaser {
+                background-color: var(--bg3)
+            }
+
+            a.top-teaser h3 {
+                color: white
+            }
+
+            .alligator-separator {
+                max-width: 800px
+            }
+
+            .cat-head img {
+                margin: 3em 0 1.25em
+            }
+
+            @media only screen and (max-width: 72em) {
+                a.front-teaser {
+                    flex-basis:100% !important;
+                    margin: 1.1em .7em
+                }
+            }
+
+            @media only screen and (max-width: 64em) {
+                ul.left li:first-child {
+                    display:none
+                }
+            }
+
+            div.saved-row a:hover {
+                color: #EFBB35
+            }
+
+            div.saved-row .front-teaser {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between
+            }
+
+            div.saved-row h3 {
+                margin-bottom: 1.3rem
+            }
+
+            .remove-post {
+                display: inline;
+                background-color: rgba(255,213,70,0.1);
+                border-bottom: 2px solid rgba(236,198,48,0.2);
+                padding: 0.3em 0.9em;
+                cursor: pointer;
+                transition: transform 0.1s cubic-bezier(0, 1.8, 1, 1.8);
+                font-size: 0.7rem
+            }
+
+            .remove-post:hover {
+                transform: scale(1.05)
+            }
+
+            .hidden {
+                display: none
+            }
+
+            input.filter {
+                width: 500px;
+                max-width: 100%;
+                margin-bottom: 2.2rem
+            }
+
+            div.category .front-teaser p {
+                color: var(--front-text-color);
+                margin-bottom: 0;
+                font-size: 1rem;
+                text-align: center
+            }
+
+            div.category .front-teaser {
+                flex-basis: 28%;
+                justify-content: space-around;
+                padding: 1.25rem;
+                flex-direction: column
+            }
+
+            div.category .row {
+                max-width: 65rem
+            }
+
+            div.category .top-row {
+                background: linear-gradient(to bottom, var(--subtle-yellow3), var(--bg));
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                padding-top: .6rem
+            }
+
+            div.category .front-teaser h3,div.category .front-teaser p {
+                font-family: Recursive, 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+                font-variation-settings: "MONO" 1;
+                font-weight: 450
+            }
+
+            div.category .front-teaser h3 {
+                margin-bottom: 1rem;
+                line-height: 1.2
+            }
+
+            body footer {
+                padding-top: 7.5rem
+            }
+
+            .subfooter {
+                background: var(--bg);
+                padding: 0rem .9rem 30px
+            }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="Alligator.io Feed" href="/feed.xml">
+        <link rel="canonical" href="https://alligator.io/react/">
+        <link rel="manifest" href="/assets/manifest.json">
+        <meta name="description" content="Browse through our posts about React and topics from the React ecosystem such as React Native and React Router."/>
+        <link rel="icon" sizes="192x192" href="/assets/img/touch-icon-192x192.png">
+        <link rel="icon" sizes="32x32" href="/assets/img/favicon-32x32.png">
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-180x180-precomposed.png">
+        <meta property="og:title" content="Posts About React"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:description" content="Browse through our posts about React and topics from the React ecosystem such as React Native and React Router."/>
+        <meta property="og:url" content="https://alligator.io/react/"/>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@alligatorio">
+        <meta name="twitter:title" content="Posts About React">
+        <meta name="twitter:description" content="Browse through our posts about React and topics from the React ecosystem such as React Native and React Router.">
+    </head>
+    <body class="dark">
+        <div class="progress"></div>
+        <div id="navigation">
+            <nav class="top-bar" role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <div class="medium-down">
+                            <a href="./index.html">
+                                <img src="./asset/pngaaa.com-267682.png" width="47" height="47" alt="Alligator.io home">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="toggle-topbar menu-icon">
+                        <a href="#" title="Navigation menu">&bull;&bull;&bull;</a>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="wrap-search">
+                            <input aria-label="Search the website" role="searchbox" type="search" placeholder="live search" class="algolia__input js-algolia__input">
+                        </li>
+                        <li class="large-up">
+                            <a href="https://twitter.com/alligatorio" target="_blank" rel="noopener">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                    <path fill="white" d="M24.3 8.8c.4 8.3-6 15.4-14.3 15.8a15 15 0 0 1-9-2.3c2.8.2 5.5-.6 7.6-2.3A5.4 5.4 0 0 1 4 16.3c1 .2 1.7 0 2.5 0A5.4 5.4 0 0 1 2 11a5.4 5.4 0 0 0 2.3.5 5.4 5.4 0 0 1-1.4-7A15 15 0 0 0 13.7 10a5.2 5.2 0 0 1 3.4-6.4 5.2 5.2 0 0 1 5.6 1.7A9 9 0 0 0 26 4a5 5 0 0 1-2.3 3 9 9 0 0 0 3-1 5 5 0 0 1-2.4 2.8z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="left">
+                        <li class="large-up">
+                            <a href="./index.html">
+                                <img src="./asset/pngaaa.com-267682.png" width="80" height="80" alt="Alligator.io home" class="alligator-logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/explore/" class="">⚡ Latest</a>
+                        </li>
+                        <li>
+                            <a href="/js/" class="javascript">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="/vuejs/" class="vuejs">Vue.js</a>
+                        </li>
+                        <li class="active">
+                            <a href="/react/" class="react">React</a>
+                        </li>
+                        <li>
+                            <a href="/angular/" class="angular">Angular</a>
+                        </li>
+                        <li>
+                            <a href="/css/" class="css">CSS</a>
+                        </li>
+                        <li>
+                            <a href="/gatsbyjs/" class="gatsby">Gatsby</a>
+                        </li>
+                        
+                      
+                        <li class="has-dropdown">
+                            <a href="#" class="switch-theme" aria-label="theme switcher" title="theme switcher"></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#" class="toggle-light">Light</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-dark dark">Dark</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-solarized solarized">Solarized</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="toggle-solarized-dark solarized-dark">Solarized Dark</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+        <div class="algolia__initial-content js-algolia__initial-content">
+            <script>
+                if (!window.customElements || !document.head.attachShadow) {
+                    document.body.classList.add('no-doodle-support');
+                }
+            </script>
+            <script src='https://d33wubrfki0l68.cloudfront.net/js/5bdef0f7fafd5d34b7e96326f042d8ef20bc22eb/assets/js/css-doodle.min.js'></script>
+            <div class="category">
+                <div class="wrap-doodle">
+                    <css-doodle class="top-doodle">:doodle { @grid: 1x35 / 100% 10rem; } @keyframes slide-in { 0% { transform: translateY(-100%); } 100% { transform: traslateY(0); } } :hover { opacity: 1; } transition: opacity .2s ease-out; animation: slide-in .25s ease-out; opacity: @pick(0.05, 0.1, 0.2, 0.3, 0.4); background: @pick(var(--yellow1), var(--yellow2), var(--yellow3), var(--green1), var(--green2), var(--green3)); height: @rand(15%, 100%); margin: 0 .2rem; </css-doodle>
+                </div>
+                <div class="cat-head text-center">
+                    <img src="https://alligator.io/images/logos/react-logo.svg" width="130" alt="react logo">
+                    <h1>Posts About React</h1>
+                    <ul class="rrssb-buttons">
+                        <li>
+                            <a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=Posts+About+React:%20https://alligator.io/react/%20@alligatorio%20%F0%9F%8E%89%F0%9F%90%8A" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                    <path fill="var(--twitter)" d="M24.3 8.8c.4 8.3-6 15.4-14.3 15.8a15 15 0 0 1-9-2.3c2.8.2 5.5-.6 7.6-2.3A5.4 5.4 0 0 1 4 16.3c1 .2 1.7 0 2.5 0A5.4 5.4 0 0 1 2 11a5.4 5.4 0 0 0 2.3.5 5.4 5.4 0 0 1-1.4-7A15 15 0 0 0 13.7 10a5.2 5.2 0 0 1 3.4-6.4 5.2 5.2 0 0 1 5.6 1.7A9 9 0 0 0 26 4a5 5 0 0 1-2.3 3 9 9 0 0 0 3-1 5 5 0 0 1-2.4 2.8z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alligator.io/react/" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+                                    <path fill="var(--fb)" d="M26.4 0H2.6C1.6 0 0 1.7 0 2.6v23.8c0 1 1.7 2.6 2.6 2.6H15V18h-4v-4h4v-3c0-3.8 2.8-6 6.2-6 1.6 0 2.4 0 2.8.2V9h-2.8c-1.8 0-2.2 1-2.2 2.2V14h5l-.6 4H19v11h7.4c1 0 2.6-1.7 2.6-2.6V2.6c0-1-1.7-2.6-2.6-2.6z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Share on Reddit" href="http://www.reddit.com/submit?url=https://alligator.io/react/&title=Posts+About+React&text=Browse+through+our+posts+about+React+and+topics+from+the+React+ecosystem+such+as+React+Native+and+React+Router." target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                    <path fill="var(--reddit)" d="M11.8 15.3c0-1-.8-2-2-2-1 0-1.8 1-1.8 2s1 2 2 2 1.8-1 1.8-2zm6.3-2c-1 0-1.8 1-1.8 2s1 2 2 2 1.8-1 1.8-2-1-2-2-2zm-.5 6.5c-.7.7-1.8 1-3.5 1s-3-.3-3.5-1a.7.7 0 0 0-1 0c-.2.3-.2.7 0 1 1 1 2.4 1.4 4.5 1.4 2 0 3.5-.5 4.5-1.4a.7.7 0 0 0 0-1c-.3-.3-.7-.3-1 0z"/>
+                                    <path fill="var(--reddit)" d="M27.7 13.3a3.2 3.2 0 0 0-3.2-3.3c-.8 0-1.5.3-2 .8-2-1.3-4.8-2-7.5-2.2L16.4 4l4 .8c.2 1.4 1.4 2.6 2.8 2.6A2.7 2.7 0 0 0 26 4.7C26 3.2 24.6 2 23 2c-1 0-2 .6-2.4 1.5l-4.7-1a.7.7 0 0 0-.7.4l-1.7 5.6c-3 0-6 .8-8 2.2-.6-.5-1.3-.8-2-.8-2 0-3.3 1.5-3.3 3.2 0 1 .6 2 1.4 2.7v.7c0 2.4 1.2 4.5 3.6 6C7.6 24 10.6 24.8 14 25c3 0 6.2-1 8.5-2.4 2.4-1.5 3.7-3.6 3.7-6V16c1-.5 1.5-1.6 1.5-2.7zm-4.5-10c.7 0 1.3.7 1.3 1.4a1.3 1.3 0 0 1-2.7 0c0-.7.6-1.3 1.4-1.3zm-21.6 10c0-1 1-2 2-2l.8.3c-1 1-1.8 2-2.2 3-.4-.4-.6-.8-.6-1.3zm20.2 8.3c-2 1.3-5 2-8 2-2.8 0-5.6-.7-7.7-2-2-1.3-3-3-3-4.8C3 15 4 13.3 6 12c2.2-1.4 5-2 8-2s5.6.6 7.7 2c2 1.3 3 3 3 4.8.2 1.8-1 3.5-3 4.8zm4-7c-.4-1-1.2-2-2.3-3l1-.2c1 0 2 .8 2 2a2 2 0 0 1-.7 1.2z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Share on Hacker News" href="https://news.ycombinator.com/submitlink?u=https://alligator.io/react/&t=Posts%20About%20React" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                    <path fill="var(--h-news)" d="M14 13.6L9.5 4.4h-3L13 16.6v7h2.5v-7l6-12.2h-2.6z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row t30">
+                    <article>
+                        <h2>💪 Top Posts</h2>
+                        <div class="row top-row">
+                            <div class="front-flex">
+                                <a class="front-teaser react-teaser" data-teaser="react" href="/react/intro-react-bulma-components/">
+                                    <h3>Introduction to Bulma CSS with React</h3>
+                                    <p>In this article you will learn the basics of using Bulma components in your React apps using the react-bulma-components library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" data-teaser="react" href="/react/react-native-redux/">
+                                    <h3>Introduction to Using Redux in a React Native App</h3>
+                                    <p>Here's our introduction to using the Redux state management library in a React Native app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" data-teaser="react" href="/react/axios-react/">
+                                    <h3>Using Axios with React</h3>
+                                    <p>Axios is an easy to use HTTP client. Learn how to use it within your React applications.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                        <hr/>
+                        <p>
+                            <input class="filter bottom-subscribe" type="text" placeholder="filter..."/>
+                        </p>
+                        <div class="row filter-row">
+                            <div class="columns front-flex">
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router-v6/">
+                                    <h3>A Sneak Peek at React Router v6</h3>
+                                    <p>A look at the new features and changes coming up with the release of React Router version 6.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/crud-context-hooks/">
+                                    <h3>Building a CRUD App with React Hooks &amp;the Context API</h3>
+                                    <p>Get an easy handle on how to build a simple React CRUD application using hooks and the context API.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/error-boundaries/">
+                                    <h3>A Simple Guide to Error Boundaries in React</h3>
+                                    <p>With simple code snippets and interactive demos, you'll learn about Error Boundaries in React; a way for components to degrade gracefully in cases of errors.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/keep-react-fast/">
+                                    <h3>5 Tips to Improve the Performance of Your React Apps</h3>
+                                    <p>Here's an up-to-date (March 2020) guide on performance optimization for React apps. We'll cover things such as memo, PureComponent, React.lazy and Suspense.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/styling-react-native/">
+                                    <h3>Styling React Native Apps</h3>
+                                    <p>A short and easy guide to get you up to speed on how to style a React Native app if you're coming over from CSS.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/staggering-animations/">
+                                    <h3>Create Staggering Animations in React</h3>
+                                    <p>How to create visually appealing entrance/exit animations with React, styled-components (or your CSS-in-JS lib of choice) and the CSS transition-delay property.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-elements/">
+                                    <h3>A Look at the React Native Elements UI Toolkit</h3>
+                                    <p>Here's how to style your React Native components using the React Native Elements cross platform UI toolkit.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/loading-components-dynamically-hooks/">
+                                    <h3>Loading React Components Dynamically with Hooks</h3>
+                                    <p>In this post I demonstrate how to load React components dynamically using hooks such as useEffect and useState.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-transition-group/">
+                                    <h3>Animating React Components Using React Transition Group</h3>
+                                    <p>Learn how to trigger animations during the mounting and unmounting stages of your React components using React Transition Group.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-basic-components/">
+                                    <h3>Learning the Basic Components of React Native</h3>
+                                    <p>Exploring the basic components in React Native: View, Text, Button, Image, ImageBackground, TouchableHighlight, ScrollView, FlatList...</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/i18n-react-intl/">
+                                    <h3>Internationalization in React with React-Intl</h3>
+                                    <p>An introduction to the React-Intl internationalization (i18n) library for React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/chakra-ui/">
+                                    <h3>Exploring the Chakra UI React Component Library</h3>
+                                    <p>Learn the basics of creating modular, responsive, and accessible components for React using Chakra UI.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-with-threejs/">
+                                    <h3>Write three.js in React Using react-three-fiber</h3>
+                                    <p>Change your approach of writing 3D using three.js, leveraging React and using the react-three-fiber library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/mobx-react-native-simplified/">
+                                    <h3>MobX with React Native, Simplified</h3>
+                                    <p>Learn how to integrate the MobX library in a React Native App for easy state management by building a simple app that makes use of the Unsplash API.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/usememo/">
+                                    <h3>A Look at the React useMemo Hook</h3>
+                                    <p>Understanding the React useMemo built-in hook and how it can be used for memoization and improving the performance of expensive functions in your apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/usereducer/">
+                                    <h3>Understanding the React useReducer Hook</h3>
+                                    <p>An overview of React's useReducer hook, which allows to access state and dispatch actions to your store from your functional components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/usecontext/">
+                                    <h3>The React useContext Hook in a Nutshell</h3>
+                                    <p>An introductory guide to React's useContext Hook to gain access to a global state via the Context API.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/countdown-timer-react-hooks/">
+                                    <h3>Countdown Timer with React Hooks</h3>
+                                    <p>Learn how to build an automatically updating countdown timer in React using Reach hooks.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/manage-user-login-react-context/">
+                                    <h3>Manage User Login with React Context</h3>
+                                    <p>A straightforward way to understand the React Context API to manage user state inside your apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/advanced-react-spring/">
+                                    <h3>Creating Complex Animations in React Using react-spring</h3>
+                                    <p>Here's a tutorial where I use react-spring and the help of the useSprings, useTrail and useChain hooks to create complex animations in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-notifications-component/">
+                                    <h3>react-notifications-component, a Powerful React Notifications Library</h3>
+                                    <p>The react-notifications-component React component library will save you tons of time with notifications inside of your React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/intro-to-react-spring/">
+                                    <h3>Intro to Animations in React Using React Spring</h3>
+                                    <p>Learn how to create dynamic physics-based animations in your React apps using the react-spring spring-physics animation library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/createref/">
+                                    <h3>A Guide for Refs in React</h3>
+                                    <p>Here's how to use the createRef method or the useRef hook to interact with DOM nodes directly in your React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/learning-react-memo/">
+                                    <h3>Getting to Grips with React.Memo</h3>
+                                    <p>Learn how to use React.Memo to improve the performance of your React applications.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/making-react-apps-more-accessible/">
+                                    <h3>Making React Apps More Accessible</h3>
+                                    <p>Learn some simple ways to make your React app more accessible. These tips will focus on common issues for React apps but can be applied to any framework.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/whats-new-in-react-16.9/">
+                                    <h3>What's New in React v16.9</h3>
+                                    <p>In this article you will learn about what's new in React v16.9</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/progress-bar-on-scroll/">
+                                    <h3>Progress Bar On Page Scroll Using React and styled-components</h3>
+                                    <p>Learn how to implement a progress bar when scrolling on a page, using React and styled-components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-window/">
+                                    <h3>Getting to Grips with react-window</h3>
+                                    <p>Learn how to use react-window to improve the performance of your React apps and achieve a frame rate of 60 FPS.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/event-handling/">
+                                    <h3>Back to Basics: Event Handling in React</h3>
+                                    <p>In this article we cover handling events for React apps with some of the popular events like click and text input.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/props/">
+                                    <h3>Back to Basic: What are Props in React and How to They Work?</h3>
+                                    <p>Let's remove the mystique behind what React props are: they're just function arguments!</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/components-viewport-react-visibility-sensor/">
+                                    <h3>An Easy Way to Know When React Components Enter the Browser Viewport</h3>
+                                    <p>Use the React Visibility Sensor library to determine when React components have entered the viewport.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-image/">
+                                    <h3>Progressive Enhancements for Loading Images Using React Image</h3>
+                                    <p>You can't always tell when an image will fail, but you can prepare for it, thanks to the React Image library for React apps!</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-icons-open-source-icons/">
+                                    <h3>React Icons Gets You Access to Hundreds of Open Source Icons</h3>
+                                    <p>Font Awesome and Material Design icons are just some of the icon libraries included with React Icons, a library for icons in your React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/performance-boost-purecomponent/">
+                                    <h3>Get a Performance Boost in React with PureComponent</h3>
+                                    <p>Learn how pure components work in React and why they're useful via some handy visual learning aids that'll help you grasp the concept in no time.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/photo-gallery-pwa-jhipster/">
+                                    <h3>Build a Beautiful Photo Gallery PWA with React + JHipster</h3>
+                                    <p>
+                                        This post shows you how to build a photo gallery progressive web app with Spring Boot, React, and JHipster 5. It uses OAuth's authorization code for authorization and OIDC for authentication. It extracts EXIF metadata from images, and displays them on the UI in a flexible grid format like Flickr does. <span class="sponsored-tag">sponsored</span>
+                                    </p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/fslightbox/">
+                                    <h3>Using Lightboxes to Create Stunning Image Galleries in React</h3>
+                                    <p>Learn how to use the fslightbox-react package to create sleek image galleries in your React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/adding-sound-to-your-react-apps/">
+                                    <h3>Adding Sound FX to Your React Apps</h3>
+                                    <p>Learn how to use the UIfx library to employ sound effects for your React web apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/extract-dominant-colors-from-images/">
+                                    <h3>Extracting Dominant Colors From Images in React Using react-palette</h3>
+                                    <p>Here's how to get colors from an image in React using an npm package called react-palette.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/craft-simple-animations-in-react/">
+                                    <h3>How to Craft Animations in React with React Simple Animate</h3>
+                                    <p>Using "react-simple-animate", learn how to create sophisticated animations using simple APIs</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/clean-import-statements-in-react/">
+                                    <h3>Super Clean, Refactor-Friendly Import Statements in React</h3>
+                                    <p>Use absolute imports with Create React App 3 to get super clean, refactor-friendly import statements.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/take-a-tour-create-react-app-version-3/">
+                                    <h3>Take a Tour: New Features in Create React App v3</h3>
+                                    <p>Here's a handy guide to get up-to-speed with the latest release of Create React App, version 3.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/responsive-websites-without-css/">
+                                    <h3>Learn How to Build Responsive Websites in React Without CSS</h3>
+                                    <p>Build responsive websites in React without using CSS @media queries. It's a lot easier than you think.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/reach-router-vs-react-router/">
+                                    <h3>Battle of the Routers: Reach Router vs React Router</h3>
+                                    <p>Let's see how Reach Router compares with React Router by looking at side-by-side code snippets.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/getting-60fps-animations-in-react/">
+                                    <h3>Getting 60fps Animations in React</h3>
+                                    <p>Some tips and tricks for React.js developers to create smooth, fast and fluid 60fps animations.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/replacing-component-lifecycles-with-useeffect/">
+                                    <h3>Replacing Component Lifecycles with the useEffect Hook, in React</h3>
+                                    <p>A walkthrough to help you convert React component lifecycles into Hooks using the useEffect Hook.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-admin-interface/">
+                                    <h3>Creating Admin Interfaces in React with react-admin</h3>
+                                    <p>In this post we'll learn how to create an admin interface easily in React using react-admin.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-360/">
+                                    <h3>Introduction to React 360</h3>
+                                    <p>Let's explore React 360 (aka React VR) and see how it can be used to create immersive 3D and virtual reality experiences on the web.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/reactxp/">
+                                    <h3>ReactXP: Building Cross Platform Apps</h3>
+                                    <p>Let's have a look at ReactXP to build React apps that work on both mobile and on the web with the same codebase. We'll build a really simple app to demonstrate.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-progressive-web-apps/">
+                                    <h3>Making Progressive Web Apps (PWAs) with React</h3>
+                                    <p>Here's how to create a Progressive Web App (PWA) using React. We'll make use of Create React App to get a web app manifest and service worker going.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/live-search-with-axios/">
+                                    <h3>Creating a Live Search Feature in React Using Axios</h3>
+                                    <p>In this tutorial we'll be building a live/instant search feature in React with the power of the Axios HTTP client.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/tough-actin-reactn/">
+                                    <h3>Tough Actin' ReactN</h3>
+                                    <p>Learn about how to manage state in React with an alternative state management library option: ReactN.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/typescript-with-react/">
+                                    <h3>Using TypeScript with React</h3>
+                                    <p>Let's go over how to use TypeScript with React functional or class-based components. In this post we also make use of the Parcel bundler to setup our project.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/converting-to-a-hook/">
+                                    <h3>Convert a React Class-Based Component to a Functional One Using a State Hook</h3>
+                                    <p>A walk through showing you how to easily convert a class-based component to a functional component using the useState hook in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/gradient-border-react-native/">
+                                    <h3>Creating a Button with Gradient Border in React Native</h3>
+                                    <p>A quick guide on creating a gradient border button component for your React Native apps using Expo's LinearGradient.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/whats-new-in-react-16.8/">
+                                    <h3>Finally Hooked! What's New in React v16.8</h3>
+                                    <p>Learn about what's new in React v16.8, with React hooks finally making their way into a stable release.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/constructors-with-react-components/">
+                                    <h3>Understanding Constructors with React Components</h3>
+                                    <p>Learn about the class constructor and how it works for React class-based components. Among other tips, you'll see why it's important to call super() first.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/real-time-bitcoin-ticker/">
+                                    <h3>Creating a Real-Time Bitcoin Ticker Dashboard in React</h3>
+                                    <p>
+                                        This is a step by step tutorial to create a real-time ticker dashboard for Bitcoin with React framework and Bitcoin APIs using FusionCharts. <span class="sponsored-tag">sponsored</span>
+                                    </p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/storybook-with-redux/">
+                                    <h3>Using Storybook with React &amp;Redux</h3>
+                                    <p>Learn how to bring all the benefits of Storybook to a Redux codebase without it getting in the way.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/rendering-arrays-in-react/">
+                                    <h3>Rendering Arrays in React</h3>
+                                    <p>In this article you will learn about how to properly render arrays in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/lists-with-react-window/">
+                                    <h3>Performant Lists in React with react-window</h3>
+                                    <p>In this post we'll learn how to efficiently render large lists of data in React using react-window.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-keys-and-you/">
+                                    <h3>React Keys and You</h3>
+                                    <p>In this article you will learn about keys and their importance in your React app when rendering collections.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/whats-new-react-16.7/">
+                                    <h3>What's New in React v16.7</h3>
+                                    <p>In this quick post you we'll go over what's new in React version 16.7.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/code-splitting-with-react-suspense/">
+                                    <h3>Code Splitting with React Suspense</h3>
+                                    <p>In this article you will learn how to use React Suspense to code split and lazy load React components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/expo-intro/">
+                                    <h3>A Brief Introduction to Expo</h3>
+                                    <p>Want to get started with React Native and Expo, but don't know where to start? This article should be a good starting place. We'll be building a simple weather app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-hooks/">
+                                    <h3>Introduction to React Hooks</h3>
+                                    <p>Learn about Hooks, an upcoming feature of React that has a lot of people excited about. We'll look especially as the useState and useEffect hooks.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/intro-react-static/">
+                                    <h3>High Level Introduction to React Static</h3>
+                                    <p>React Static allows you to build a single-page app (spa) while still taking advantage of the super powers that static sites offer.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-authentication/">
+                                    <h3>Authentication in a React Native App Using AWS Amplify</h3>
+                                    <p>Here's our introduction to using AWS Mobile Hub and Amplify to provide authentication in a React Native app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/smart-dumb-components/">
+                                    <h3>Categorizing Components Into Smart &amp;Dumb Components, in React</h3>
+                                    <p>How dividing components into smart and dumb (container and presentational) components provides organization, saves time and improves your React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/skeleton-screens-react-and-react-native/">
+                                    <h3>Skeleton screens with React and React Native ☠</h3>
+                                    <p>Learn how to craft a modern experience for web and mobile in React or React Native using skeleton screens.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/payments-stripe-checkout-react/">
+                                    <h3>Payments with Stripe Checkout and React</h3>
+                                    <p>How to use react-stripe-checkout to accept credit card payments in a React app using Stripe Checkout.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/whats-new-react-16.6/">
+                                    <h3>What's New in React v16.6</h3>
+                                    <p>With React v16.6 just out, let's go over some of the new features like React.lazy(), Suspense, React.memo(), contextType and getDerivedStateFromError.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/forms-with-react-and-formik/">
+                                    <h3>Tear-Free Forms with React and Formik</h3>
+                                    <p>In this article you will learn how to easily build forms with React and Formik.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/styling-with-react-fela/">
+                                    <h3>Styling Components with React Fela</h3>
+                                    <p>In this article you will learn how to style your React components with React Fela.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/geolocation-react-native/">
+                                    <h3>Using Geolocation in React Native</h3>
+                                    <p>Understand how to access Permissions and use Geolocation data in your React Native projects.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-powerplug/">
+                                    <h3>Rapid Prototyping Made Easy with React PowerPlug</h3>
+                                    <p>In this article you will learn how to rapid prototype stateful components with the help of React PowerPlug.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/reakit/">
+                                    <h3>Up and Running With Reakit</h3>
+                                    <p>Fast lane introduction to the Reakit component library for React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-victory/">
+                                    <h3>Beautiful Charts and Graphs with React and Victory</h3>
+                                    <p>In this article you will learn how create beautiful charts and graphs in React using the Victory components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/beautiful-uis-ant-design/">
+                                    <h3>Crafting Beautiful UIs in React Using Ant Design</h3>
+                                    <p>In this post we'll build a basic todo application in React using the Ant Design UI library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-morph/">
+                                    <h3>Morphing UI Transitions with React Morph</h3>
+                                    <p>In this article you will learn how to create morphing UI transitions in React apps using react-morph.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-burger-menu-sidebar/">
+                                    <h3>Building a Sidebar Component in React with react-burger-menu</h3>
+                                    <p>In this post you'll learn how to use the react-burger-menu library to create a nice sidebar in a React application.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-values/">
+                                    <h3>Easy State Management with React Values</h3>
+                                    <p>In this article you will learn about how to easily manage component state with the react-values library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-autocomplete/">
+                                    <h3>Building an Autocomplete Component in React</h3>
+                                    <p>In this article you will learn how to build an autocomplete component in React using only local state and some simple event handlers.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/jsx-introduction/">
+                                    <h3>A Brief Introduction to JSX</h3>
+                                    <p>Let's have a look at JSX, a langage extension for JavaScript that makes it easy to write React UI logic in a familiar HTML-like syntax.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/use-native-icons/">
+                                    <h3>Use Native Icons in React Native</h3>
+                                    <p>Use per-platform native icons in your React Native apps using react-native-vector-icons.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-emotion/">
+                                    <h3>Styling React with Emotion</h3>
+                                    <p>In this article you will learn how to style components in React using the emotion CSS-in-JS library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-flexbox/">
+                                    <h3>Building a Landing Page in React Native Using Flexbox</h3>
+                                    <p>Here's a quick guide on how to use flexbox styling in your React Native apps to create interesting layouts.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-navigation/">
+                                    <h3>Routing with React Navigation in React Native</h3>
+                                    <p>A brief introduction to routing using the React Navigation library for React Native.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-calidation/">
+                                    <h3>Red Hot Form Validation for React Using calidation</h3>
+                                    <p>In this article you will learn how to implement form validation using the calidation library in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/linting-react/">
+                                    <h3>Linting React Using ESLint with Create React App</h3>
+                                    <p>Getting started with a linter using Create React App, and how to configure it to meet your project needs.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/custom-inputs/">
+                                    <h3>Custom Inputs in React Native</h3>
+                                    <p>In this short post you'll learn how to build your own custom text input and select form elements in React Native.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/roadmap-react-native-developer/">
+                                    <h3>A Roadmap to Becoming a Better React Native Developer in 2018 &amp;Beyond</h3>
+                                    <p>Just getting started with React Native and confused at how to get started with learning everything? This guide will point you towards some useful resources.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-infinite-scroll/">
+                                    <h3>Implementing Infinite Scroll Into a React Component</h3>
+                                    <p>In this article you will learn how to implement infinite scrolling using React using nothing but component state and an onscroll event handler.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/android-soft-input/">
+                                    <h3>Change Soft Input Mode in React Native Android</h3>
+                                    <p>Check out how to control the behavior of the screen when the keyboard is opened in Android on a React Native app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-accordion-component/">
+                                    <h3>Building an Accordion Component with React</h3>
+                                    <p>In this article you will learn how to build an Accordion (show/hide) component in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/font-awesome/">
+                                    <h3>Using Font Awesome 5 in React</h3>
+                                    <p>Building snazzy forms in React using SVG icons from Font Awesome 5. This is part 2 of a series on building forms using Reactstrap.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/testing-redux-reducers/">
+                                    <h3>Testing React / Redux Apps with Jest &amp;Enzyme - Part 4: Testing Redux Reducers</h3>
+                                    <p>In this 4th part of a series on testing React/Redux apps we'll take a look at testing your app's reducers.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/redux-beacon/">
+                                    <h3>Google Analytics on your React/Redux App with Redux Beacon</h3>
+                                    <p>Tracking page views, events, or any Redux action in Google Analytics with the help of Redux Beacon, an utility that helps integrate analytics in a Redux app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-getting-started/">
+                                    <h3>Getting Started with React Native and Expo</h3>
+                                    <p>An introduction to React Native and Expo to create native Android and iOS apps using the power of JavaScript and React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-dropzone/">
+                                    <h3>Drag and Drop File Uploads in React with react-dropzone</h3>
+                                    <p>In this article you will learn how to use react-dropzone with React to create a nice drag &amp;drop UI for file upload.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/fancy-forms-reactstrap/">
+                                    <h3>Fancy Forms in React with Reactstrap</h3>
+                                    <p>Highlighting the benefits of using Reactstrap, a library of components based on Bootstrap 4, for forms in React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/get-derived-state/">
+                                    <h3>Using Derived State in React</h3>
+                                    <p>In this post you'll learn how to use the new getDerivedStateFromProps method in your React components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/testing-redux-actions/">
+                                    <h3>Testing React / Redux Apps with Jest &amp;Enzyme - Part 3: Testing Redux Actions</h3>
+                                    <p>Part three of four-part series that shows you how to test your React / Redux applications. In this installment we'll see about testing Redux actions.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/tabs-component/">
+                                    <h3>Building a Tabs Component with React</h3>
+                                    <p>In this article you will learn how to build a simple Tabs component in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/create-i18n-module/">
+                                    <h3>Add i18n Yourself in a React and Redux App</h3>
+                                    <p>Learn how you can build a i18n module for React by from scratch without any external library dependencies.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/material-ui/">
+                                    <h3>Elegant UX in React with Material-UI</h3>
+                                    <p>An intro to Material-UI for React, a beautiful and themable component library based on Google's design spec.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-redux/">
+                                    <h3>Connecting Redux to React Using React Redux</h3>
+                                    <p>Redux is an independent library from React, but it's really easy to connect the two together, thanks to the React Redux bindings.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router-ssr/">
+                                    <h3>Using React Router 4 with Server-Side Rendering</h3>
+                                    <p>A look at configuring React Router v4 to work with an Express server-side rendering setup. You'll see how to make use of StaticRouter and matchPath, among others.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/testing-react-components/">
+                                    <h3>Testing React / Redux Apps with Jest &amp;Enzyme - Part 2: Testing React Components</h3>
+                                    <p>Second part in a series showing how to test React apps using Jest and Enzyme. In this part, we'll go over how to test React components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/declarative-html5-apis-react-fns/">
+                                    <h3>Using &quot;window &quot;the React Way with react-fns</h3>
+                                    <p>Use HTML5 APIs in your React apps using a declarative idiom with the react-fns utility library.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-select/">
+                                    <h3>Searchable, Async Dropdowns in React Using React-Select</h3>
+                                    <p>An introduction to React Select v2, a sleek, modern dropdown component for React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/simple-authorization/">
+                                    <h3>Simple Authorization in React</h3>
+                                    <p>Tutorial on how to build a simple role-based authorization mechanism yourself for a React app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-helmet/">
+                                    <h3>Managing What’s in Your Head Using React Helmet</h3>
+                                    <p>Here's a quick overview of using the React Helmet component to dynamically set header tags for a React app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/server-side-rendering/">
+                                    <h3>An Introduction to React Server-Side Rendering</h3>
+                                    <p>In this post we'll go over the basic setup to server-side render a simple React app created using create-react-app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-devtools-intro/">
+                                    <h3>React Devtools: A Brief Introduction</h3>
+                                    <p>Learn how to spend less time debugging your apps and more time developing using the React Devtools.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/testing-react-redux-with-jest-enzyme/">
+                                    <h3>Testing React / Redux Apps with Jest &amp;Enzyme - Part 1: Installation &amp;Setup</h3>
+                                    <p>First of a four-part series that shows you how to test your React / Redux applications using Jest &amp;Enzyme.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/higher-order-components/">
+                                    <h3>A Quick Intro to React's Higher-Order Components</h3>
+                                    <p>An introduction to higher-order component classes and functions in React as well as what they are used for.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/glamorous/">
+                                    <h3>Styling React Components Using glamorous</h3>
+                                    <p>glamorous is a flavor of CSS-in-JS. In this post, you'll see how you can style your components with it.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/context-api/">
+                                    <h3>Understanding the React Context API</h3>
+                                    <p>React 16.3 introduced a new context API that makes it easy to share data between multiple components of the component tree. Here's a quick tutorial on how to use it.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/unstated/">
+                                    <h3>Easy State Management in React Using Unstated</h3>
+                                    <p>Unstated is a new library that makes state management in React dead simple. You can reach for it when you need a little more than setState.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-loadable/">
+                                    <h3>Code Splitting in React Using React Loadable</h3>
+                                    <p>Learn how to use the React Loadable library to lazily load chunks of code when needed in the app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/fragments/">
+                                    <h3>Returning Multiple Children Using React Fragments</h3>
+                                    <p>React 16.2 introduced a new component, Fragment, to give us an easy way to return multiple children in a component's render method. See how it's used in this post.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-motion/">
+                                    <h3>Animations in React Using React Motion</h3>
+                                    <p>A quick introduction to React Motion, its Motion component and the spring function to create simple animations.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/mern-stack-intro/">
+                                    <h3>An Easy Way to Get Started with the MERN Stack</h3>
+                                    <p>In this post we're exploring how to setup an app using Mongo, React, Redux and Express.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/graphql-apollo-boost/">
+                                    <h3>Intro to GraphQL in React Using React Apollo &amp;Apollo Boost</h3>
+                                    <p>A quick tutorial to learn how to use React Apollo and Apollo Boost to interact with a GraphQL server.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/modal-component/">
+                                    <h3>Implementing a Simple Modal Component in React</h3>
+                                    <p>A quick guide to help you learn how to build a barebones Modal component in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/theming-styled-components/">
+                                    <h3>Theming styled-components</h3>
+                                    <p>This tutorial explains how to create themes to handle reusable styles with styled-components in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/styled-components/">
+                                    <h3>styled-components, the Modern Way to Handle CSS in React</h3>
+                                    <p>In this post you'll find an introduction to styled-components and the benefits they can give to your React app.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-css/">
+                                    <h3>CSS in React</h3>
+                                    <p>Explore the four most common ways of using CSS inside React JS Components: global CSS, JavaScript stylesheets, modular stylesheets and stylized components.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/using-new-portal-feature-in-react/">
+                                    <h3>Using the New Portal Feature in React</h3>
+                                    <p>Demonstration of how to use the new portal feature in React to help render DOM nodes outside a parent component.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/i18n-with-react-and-i18next/">
+                                    <h3>I18n with React and i18next</h3>
+                                    <p>A brief introduction to internationalizing a React app using i18next.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/getting-started-webpack-react/">
+                                    <h3>Getting Started with Webpack + React</h3>
+                                    <p>A short guide on using Webpack to bundle dependencies with code and deploy a React application.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/new-way-to-handle-events/">
+                                    <h3>A New Way to Handle Events in React</h3>
+                                    <p>Skip boilerplate code and learn how to write more concise event handlers for your React code.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/css-in-js-roundup-styling-react-components/">
+                                    <h3>CSS-in-JS Roundup: Styling React Components</h3>
+                                    <p>Compare and contrast the top CSS-in-JS libraries for styling your React and React Native projects.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/using-this-props-children/">
+                                    <h3>Creating Compositional Components in React With this.props.children</h3>
+                                    <p>Gain a better understanding of the unique perks of this.props.children.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-native-ui-toolkit-roundup/">
+                                    <h3>React Native UI Toolkit Roundup</h3>
+                                    <p>Compare and contrast the top React Native UI Toolkits to help bootstrap your next React Native project.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/gatsby-static-site-generator/">
+                                    <h3>Gatsby - Not Yo' Mama's Static Site Generator</h3>
+                                    <p>Gatsby, a React-based static-site generator, combines front-end best-practices with GraphQL-like data sources.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/getting-atomic-updates-with-setstate/">
+                                    <h3>Atomic SetState Updates in React</h3>
+                                    <p>Learn how to manage React state with functional precision</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/index-js-public-interfaces/">
+                                    <h3>Using index.js for Fun and Public Interfaces</h3>
+                                    <p>Use an index.js file in the root of your React module folders to create public interfaces</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/flow-enums/">
+                                    <h3>Using Enums in Flow</h3>
+                                    <p>A guide to using string Enums in Flow, even if they don't exist in native JavaScript.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router-map-to-routes/">
+                                    <h3>Mapping Routes in React Router</h3>
+                                    <p>A guide to mapping data to routes in React Router 4.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router-optional-parameters/">
+                                    <h3>React Router: Optional Parameters</h3>
+                                    <p>An overview of using optional parameters in React Router 4.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router-parameters/">
+                                    <h3>React Router Parameters</h3>
+                                    <p>An overview of using parameters with React Router 4.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-router/">
+                                    <h3>React Router Overview</h3>
+                                    <p>In this brief introduction to React Router 4 you'll see how to define basic routes as well as link to specific routes.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-snapshot-testing/">
+                                    <h3>React Snapshot Testing</h3>
+                                    <p>An overview of snapshot testing for React components using the Jest testing framework.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/functional-components/">
+                                    <h3>Functional Component Overview in React</h3>
+                                    <p>Learn how to create functional components in React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/refs/">
+                                    <h3>Introduction to the React Ref System</h3>
+                                    <p>An overview of refs in React with sample use cases.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/lifecycle-functions/">
+                                    <h3>Component Lifecycle Functions in React</h3>
+                                    <p>An overview of the lifecycle functions available to class components for React apps.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/class-components/">
+                                    <h3>Class Component Overview in React</h3>
+                                    <p>Learn how to create class components in React as well as using props and lifecycle hooks.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/the-new-proptypes/">
+                                    <h3>React.PropTypes Is Dead, Long Live PropTypes in React</h3>
+                                    <p>How to stop worrying and love the new prop-types module for React.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/next-js/">
+                                    <h3>Starting Off Strong with React and Next.js</h3>
+                                    <p>Get up and running in a snap with Next.js and never look back</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/create-react-app/">
+                                    <h3>Getting Comfortable with Create React App</h3>
+                                    <p>Learning to let go with Create React App. Initialize new React projects with just one command and without all the usual setup of build tools.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/flowtype/">
+                                    <h3>Static Type Checking With Flow</h3>
+                                    <p>Getting type safe is easy with Facebook's Flow. This short intro will help you get comfortable with Flow's usage.</p>
+                                </a>
+                                <a class="front-teaser react-teaser" href="https://alligator.io/react/react-proptypes/">
+                                    <h3>Working With Types Using React.PropType</h3>
+                                    <p>A gentle introduction to static type checking using React's built-in PropType validation tools.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <h3 class="text-center t70 b30 hidden oops">Oops, no match found 😭</h3>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    let inputEl = document.querySelector('.filter');
+                    let elements = document.querySelectorAll('.filter-row .front-teaser');
+                    inputEl.addEventListener('keyup', function(e) {
+                        let key = e.which || e.keyCode;
+                        if (key === 13) {
+                            inputEl.blur();
+                        } else if (key === 27) {
+                            inputEl.value = '';
+                            inputEl.blur();
+                            resetElems(elements);
+                        } else {
+                            hasValue(inputEl.value, elements);
+                        }
+                    });
+                });
+                function resetElems(elements) {
+                    elements.forEach(function(elem) {
+                        elem.classList.remove('hidden');
+                    });
+                }
+                function hasValue(value, elements) {
+                    let notFound = 0;
+                    let oops = document.querySelector('h3.oops');
+                    elements.forEach(function(elem) {
+                        let title = elem.querySelector('h3').innerText.toLowerCase();
+                        let description = elem.querySelector('p').innerText.toLowerCase();
+                        let content = title + description;
+                        if (content.indexOf(value.toLowerCase()) < 0) {
+                            elem.classList.add('hidden');
+                            notFound++;
+                        } else {
+                            elem.classList.remove('hidden');
+                        }
+                    });
+                    if (notFound === elements.length) {
+                        oops.classList.remove('hidden');
+                    } else {
+                        oops.classList.add('hidden');
+                    }
+                }
+            </script>
+            <script>
+                const topDoodle = document.querySelector('.top-doodle');
+                topDoodle.addEventListener('click', ()=>{
+                    topDoodle.update();
+                }
+                );
+            </script>
+        </div>
+        <div class="algolia__search-content js-algolia__search-content">
+            <div class="t30">
+                <article>
+                    <header>
+                        <button class="search__clear button" aria-label="Clear search results">&#10006;Clear</button>
+                        <h3 class="b30 t20 search-results">🕵 Search Results</h3>
+                    </header>
+                    <div class="algolia__results">
+                        <p class="text-center" style="column-span: all">🔎 Searching...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <footer>
+            <div class="wrap-subfooter">
+                <div class="subfooter">
+                    <div style="border: none;"></div>
+                    <div>
+                        <a href="/info/">About</a>
+                    </div>
+                    <div>
+                        <a href="/credits/">Credits</a>
+                    </div>
+                    <div>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                    <div>
+                        <a href="https://www.iubenda.com/privacy-policy/583339" target="blank" rel="noopener">Privacy</a>
+                    </div>
+                    <div class="sub-sub-footer">
+                        <p>
+                            Note that we link to certain 3rd party products via affiliate or sponsored links. You can <a rel="nofollow" href="/about-sponsored-or-affiliate/">learn more about it here</a>
+                            .
+                        </p>
+                        <p>
+                            Code snippets licensed under <a href="https://oss.ninja/mit?organization=Alligator.io">MIT</a>
+                            , unless otherwise noted. <br>Content &amp;Graphics © 2020 Alligator.io LLC
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <link rel='preload' as='style' property='stylesheet' onload='this.onload=null;this.rel="stylesheet"' href='https://d33wubrfki0l68.cloudfront.net/css/ed717dd04ecfbfcfa24ca6b9d11689e762c80446/assets/css/c.css'/>
+        <noscript>
+            <link rel='stylesheet' property='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/ed717dd04ecfbfcfa24ca6b9d11689e762c80446/assets/css/c.css'/>
+        </noscript>
+        <script>
+            /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+            !function(t) {
+                "use strict";
+                t.loadCSS || (t.loadCSS = function() {}
+                );
+                var e = loadCSS.relpreload = {};
+                if (e.support = function() {
+                    var e;
+                    try {
+                        e = t.document.createElement("link").relList.supports("preload")
+                    } catch (t) {
+                        e = !1
+                    }
+                    return function() {
+                        return e
+                    }
+                }(),
+                e.bindMediaToggle = function(t) {
+                    var e = t.media || "all";
+                    function a() {
+                        t.media = e
+                    }
+                    t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a),
+                    setTimeout(function() {
+                        t.rel = "stylesheet",
+                        t.media = "only x"
+                    }),
+                    setTimeout(a, 3e3)
+                }
+                ,
+                e.poly = function() {
+                    if (!e.support())
+                        for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) {
+                            var o = a[n];
+                            "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0),
+                            e.bindMediaToggle(o))
+                        }
+                }
+                ,
+                !e.support()) {
+                    e.poly();
+                    var a = t.setInterval(e.poly, 500);
+                    t.addEventListener ? t.addEventListener("load", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    }) : t.attachEvent && t.attachEvent("onload", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    })
+                }
+                "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS
+            }("undefined" != typeof global ? global : this);
+        </script>
+        <script>
+            window.ALGOLIA_CONFIG = {
+                applicationId: "FQ1L1MP2SI",
+                indexName: "alligator_content",
+                apiKey: "db955bb5585ab90c4c24cb8728718795",
+                baseurl: ""
+            };
+        </script>
+        <script id="algolia__template" type="text/template">
+            <div class="algolia__result"> <a class="algolia__result-link" href="{{ full_url }}">{{{ _highlightResult.title.value }}}</a><div class="algolia__result-text">{{{ _highlightResult.content.value }}}</div></div>
+        </script>
+        <script id="algolia__template--no-results" type="text/template">
+            <p class="text-center" style="column-span: all">Oh noes, nothing found 😩</p>
+        </script>
+        <script defer src='https://d33wubrfki0l68.cloudfront.net/bundles/e2203d1b1c14952473222bcff4c58a8bd9fef14a.js'></script>
+    </body>
+</html>
